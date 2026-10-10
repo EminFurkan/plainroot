@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lexmio Support</title>
+<meta name="description" content="Help with Lexmio: adding widgets, word updates, subscription, pronunciation and contact.">
+<style>
+  :root { --canvas:#F4F6F1; --surface:#FFFFFF; --ink:#17211B; --secondary:#57645B; --accent:#2E5B45; --divider:#E1E6DD; color-scheme:light dark; }
+  @media (prefers-color-scheme: dark) {
+    :root { --canvas:#141A17; --surface:#1D2621; --ink:#E7EEE9; --secondary:#A9B8AE; --accent:#9CC7A8; --divider:#2F3B34; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--canvas); color:var(--ink); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:40px 20px 64px; }
+  h1, h2 { font-family: "New York", "Iowan Old Style", Georgia, serif; font-weight:400; line-height:1.2; }
+  h1 { font-size:2.2rem; margin:0 0 8px; }
+  h2 { font-size:1.4rem; margin:36px 0 12px; }
+  p, li { margin:0 0 10px; }
+  a { color:var(--accent); }
+  .meta { color:var(--secondary); }
+  .lang { display:flex; gap:12px; margin:16px 0 8px; }
+  .lang a { padding:6px 14px; border:1px solid var(--divider); border-radius:999px; text-decoration:none; }
+  .contact { background:var(--surface); border:1px solid var(--divider); border-radius:16px; padding:16px 20px; margin:24px 0; }
+  details { background:var(--surface); border:1px solid var(--divider); border-radius:14px; padding:12px 16px; margin:0 0 10px; }
+  summary { cursor:pointer; font-weight:600; }
+  details[open] summary { margin-bottom:8px; }
+  hr { border:0; border-top:1px solid var(--divider); margin:56px 0; }
+  footer { color:var(--secondary); font-size:.9rem; border-top:1px solid var(--divider); margin-top:48px; padding-top:16px; }
+</style>
+</head>
+<body>
+<main>
+<section id="en" lang="en">
+  <h1>Lexmio Support</h1>
+  <p class="meta">English words with their Turkish meanings, on your Home Screen and Lock Screen.</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a></nav>
+
+  <div class="contact">
+    <p><strong>Need help or found a wrong word?</strong> Send a message to <a href="https://www.instagram.com/lexmioapp/">@lexmioapp</a> on Instagram, with the word and a screenshot if you can. A support email address is coming soon.</p>
+  </div>
+
+  <h2>Widgets</h2>
+  <details open>
+    <summary>How do I add Lexmio to my Lock Screen?</summary>
+    <ol>
+      <li>Wake your iPhone, then touch and hold the Lock Screen.</li>
+      <li>Tap <em>Customize</em>, then choose <em>Lock Screen</em>.</li>
+      <li>Tap the area below the clock for the rectangular widget (the word and its meaning), or the line above the clock for the one-line widget.</li>
+      <li>Choose Lexmio, then tap <em>Done</em>.</li>
+    </ol>
+  </details>
+  <details>
+    <summary>How do I add Lexmio to my Home Screen?</summary>
+    <ol>
+      <li>Touch and hold an empty area on your Home Screen.</li>
+      <li>Tap <em>Edit</em>, then <em>Add Widget</em> (or the + button on earlier iOS versions).</li>
+      <li>Search for Lexmio, pick the small or medium size, then tap <em>Add Widget</em>.</li>
+    </ol>
+  </details>
+  <details>
+    <summary>The widget says “Open the app”.</summary>
+    <p>Open Lexmio once and finish setting up your plan. The widget then shows your words. If you reset Lexmio, open it again to choose new words. After a restart, iOS may wait until you unlock your iPhone once before widgets can read their words.</p>
+  </details>
+  <details>
+    <summary>The word doesn’t change at exactly the time I chose.</summary>
+    <p>Lexmio prepares the upcoming words in advance, but iOS decides exactly when widgets refresh. Changes every 30 seconds or every minute are especially likely to be delayed or skipped by iOS. Longer intervals are the most reliable. Quiet hours keep the last word on screen overnight.</p>
+  </details>
+  <details>
+    <summary>Why does the Lock Screen widget look different from the app?</summary>
+    <p>iOS styles Lock Screen widgets to match your wallpaper, so their colours are set by the system. Lexmio uses typography, not colour, so the word stays clear.</p>
+  </details>
+
+  <h2>Plans and levels</h2>
+  <details>
+    <summary>Where do my new words come from?</summary>
+    <p>From the plan you chose: Everyday English, Work, Travel, Academic study, YDS / YÖKDİL, IELTS or TOEFL. Every new word comes from that plan, starting at your level. Lexmio plans a week of new words ahead, so your widget keeps bringing new words even on days you don’t open the app.</p>
+  </details>
+  <details>
+    <summary>How do I change my plan, level or number of new words?</summary>
+    <p>Open <em>Your plan</em> and change <em>Plan</em>, <em>Level</em> or <em>New words</em>. Your saved words and practice history stay. Exam plans cover a set range of levels, so <em>Words start at</em> can differ from your level: IELTS words, for example, start at B2.</p>
+  </details>
+  <details>
+    <summary>Can I learn more words today?</summary>
+    <p>Yes. Once you’ve seen today’s new words, Today offers five more, up to 20 new words in a day. They come back for review like the others, so each one adds a few short reviews over the coming months. When many words are waiting for practice, the offer pauses until you catch up.</p>
+  </details>
+  <details>
+    <summary>Is the word check a test?</summary>
+    <p>No. The one-minute check asks which words you know, with a few made-up words mixed in to catch guesses, and suggests where to start. Levels are estimates, not certified results, and they don’t predict exam scores. Later, Lexmio may suggest an easier or harder level from your answers. It never changes your level without asking.</p>
+  </details>
+  <details>
+    <summary>Why am I seeing words I’ve seen before?</summary>
+    <p>Once every word in your plan has been shown, Lexmio brings back the ones you haven’t marked as known. If you know every word in your plan, Today tells you so and you can choose another plan in <em>Your plan</em>. Your saved and practised words stay.</p>
+  </details>
+
+  <h2>Learning</h2>
+  <details>
+    <summary>How do I move between words?</summary>
+    <p>Swipe the word card left for the next word and right to go back to the one before. Swipe it up to see its details: the definition and the example’s translation. With VoiceOver, use the <em>Next word</em>, <em>Previous word</em> and <em>Word details</em> actions on the word.</p>
+  </details>
+  <details>
+    <summary>How does practice work?</summary>
+    <p>Open the <em>Practice</em> tab and tap <em>Practice for a minute</em>. See the English word, try to recall its meaning, then reveal it and choose <em>Again</em>, <em>Remembered</em> or <em>Easy</em>. Each answer shows when you will see the word again: a few minutes for Again, then 1, 3, 7, 14, 30, 60 and 120 days as you keep remembering it. Practised words also appear in your widget between new words. New words come back on your widget on their third and seventh day without their meaning: try to remember it, then tap to check.</p>
+  </details>
+  <details>
+    <summary>I already know a word.</summary>
+    <p>Tap <em>I know it</em> on the word. It stops appearing among your new words, and you can undo this any time from the Words tab.</p>
+  </details>
+  <details>
+    <summary>Where do the meanings and examples come from?</summary>
+    <p>English definitions, examples and their Turkish translations are written for Lexmio and checked before they ship. Many Turkish meanings draw on Wiktionary. A word’s sources are under <em>Sources</em> in its details, and <em>Your plan → Word lists and credits</em> lists every source we use.</p>
+  </details>
+  <details>
+    <summary>“Listen” doesn’t play anything.</summary>
+    <p>Words play even in silent mode, so turn the volume up with the side buttons while Lexmio is open. If headphones are connected, the word plays there. If Lexmio says no English voice is available, add one in <em>Settings → Accessibility → Spoken Content → Voices → English</em>.</p>
+  </details>
+
+  <h2>Subscription</h2>
+  <details>
+    <summary>How does the free week work?</summary>
+    <p>New subscribers get the first week of the yearly subscription free. After it, the subscription renews every year at the price shown before you started, until you cancel. Cancel at least 24 hours before the free week ends and you won’t be charged. You can also subscribe monthly, or buy lifetime access once instead.</p>
+  </details>
+  <details>
+    <summary>Will Lexmio remind me before I’m charged?</summary>
+    <p>Yes, if you allow notifications. Two days before your free week ends, Lexmio sends a reminder with the date and the yearly price, and Today shows the same note from then on. Your plan → Reminders also has an optional daily practice reminder at a time you choose; it skips days you’ve already practiced. All reminders are scheduled on your iPhone.</p>
+  </details>
+  <details>
+    <summary>Can I switch between monthly and yearly?</summary>
+    <p>Yes. Open <em>Your plan → Subscription → Manage subscription</em> and choose the other option. Apple handles the change and shows when it starts and what you’ll pay.</p>
+  </details>
+  <details>
+    <summary>How do I cancel?</summary>
+    <p>In Lexmio, open <em>Your plan → Subscription → Manage subscription</em>, or go to <em>Settings → [your name] → Subscriptions → Lexmio</em>. Lexmio keeps working until the end of the period you’ve paid for.</p>
+  </details>
+  <details>
+    <summary>I changed iPhones or reinstalled Lexmio.</summary>
+    <p>Sign in with the same Apple Account and tap <em>Restore</em> on the subscription screen, or <em>Your plan → Subscription → Restore purchases</em>. Your plan and progress come back from your iPhone backup, not from the purchase.</p>
+  </details>
+  <details>
+    <summary>What happens if my subscription ends?</summary>
+    <p>Your plan, saved words and progress stay on your iPhone. Lexmio shows the subscription screen when you open it, and the widget asks you to open the app. Subscribe again and you continue where you left off.</p>
+  </details>
+  <details>
+    <summary>How do I ask for a refund?</summary>
+    <p>Apple handles payments and refunds. Request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+  </details>
+
+  <h2>Your data</h2>
+  <details>
+    <summary>Do I need an account? Is my data backed up?</summary>
+    <p>There is no Lexmio account; purchases use your Apple Account. Your plan, saved words and practice history stay on your iPhone and are included in your normal iPhone or iCloud backup. See the <a href="privacy.html">privacy policy</a>, or <em>Your plan → Privacy</em> in the app.</p>
+  </details>
+  <details>
+    <summary>How do I start over?</summary>
+    <p>Open <em>Your plan → Reset Lexmio on this iPhone</em>. This removes your plan, saved words and practice history and cannot be undone. It doesn’t cancel a subscription.</p>
+  </details>
+  <details>
+    <summary>How do I switch the app between English and Turkish?</summary>
+    <p>Lexmio follows your iPhone’s language. To choose a language for Lexmio only, open <em>Your plan → App language</em>, or go to <em>Settings → Apps → Lexmio → Language</em>. That option appears when your iPhone has more than one language in <em>Settings → General → Language &amp; Region</em>.</p>
+  </details>
+  <footer>Lexmio by Plainroot Studio · <a href="privacy.html">Privacy policy</a></footer>
+</section>
+
+<hr>
+
+<section id="tr" lang="tr">
+  <h1>Lexmio Destek</h1>
+  <p class="meta">İngilizce kelimeler ve Türkçe anlamları, Ana Ekranında ve Kilit Ekranında.</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a></nav>
+
+  <div class="contact">
+    <p><strong>Yardıma mı ihtiyacın var ya da hatalı bir kelime mi buldun?</strong> Instagram’da <a href="https://www.instagram.com/lexmioapp/">@lexmioapp</a> hesabına mesaj gönder; mümkünse kelimeyi ve bir ekran görüntüsünü ekle. Destek e-posta adresi yakında eklenecek.</p>
+  </div>
+
+  <h2>Widget’lar</h2>
+  <details open>
+    <summary>Lexmio’yu Kilit Ekranına nasıl eklerim?</summary>
+    <ol>
+      <li>iPhone’unu uyandır, sonra Kilit Ekranına dokunup basılı tut.</li>
+      <li><em>Özelleştir</em>’e dokun, ardından <em>Kilit Ekranı</em>’nı seç.</li>
+      <li>Dikdörtgen widget (kelime ve anlamı) için saatin altındaki alana, tek satırlık widget için saatin üstündeki satıra dokun.</li>
+      <li>Lexmio’yu seç, sonra <em>Bitti</em>’ye dokun.</li>
+    </ol>
+  </details>
+  <details>
+    <summary>Lexmio’yu Ana Ekrana nasıl eklerim?</summary>
+    <ol>
+      <li>Ana Ekranda boş bir alana dokunup basılı tut.</li>
+      <li><em>Düzenle</em>’ye, ardından <em>Widget Ekle</em>’ye dokun (eski iOS sürümlerinde + düğmesi).</li>
+      <li>Lexmio’yu ara, küçük ya da orta boyutu seç, sonra <em>Widget Ekle</em>’ye dokun.</li>
+    </ol>
+  </details>
+  <details>
+    <summary>Widget “Uygulamayı aç” diyor.</summary>
+    <p>Lexmio’yu bir kez aç ve planını ayarlamayı bitir. Widget ardından kelimelerini gösterir. Lexmio’yu sıfırladıysan yeni kelimeler seçmek için uygulamayı yeniden aç. Yeniden başlatmadan sonra iOS, widget’ların kelimeleri okuyabilmesi için iPhone’unun bir kez kilidinin açılmasını bekleyebilir.</p>
+  </details>
+  <details>
+    <summary>Kelime tam seçtiğim zamanda değişmiyor.</summary>
+    <p>Lexmio sıradaki kelimeleri önceden hazırlar, ancak widget’ların tam olarak ne zaman yenileneceğine iOS karar verir. 30 saniyede ya da dakikada bir değişim, iOS tarafından özellikle geciktirilebilir ya da atlanabilir. Daha uzun aralıklar en güvenilir olanlardır. Sessiz saatler, son kelimeyi gece boyunca ekranda tutar.</p>
+  </details>
+  <details>
+    <summary>Kilit Ekranı widget’ı neden uygulamadan farklı görünüyor?</summary>
+    <p>iOS, Kilit Ekranı widget’larını duvar kâğıdına göre biçimlendirir; renkleri sistem belirler. Lexmio kelimenin net görünmesi için renge değil, yazı tipine güvenir.</p>
+  </details>
+
+  <h2>Planlar ve seviyeler</h2>
+  <details>
+    <summary>Yeni kelimelerim nereden geliyor?</summary>
+    <p>Seçtiğin plandan: Günlük İngilizce, İş, Seyahat, Akademik çalışma, YDS / YÖKDİL, IELTS ya da TOEFL. Her yeni kelime o plandan, senin seviyenden başlayarak gelir. Lexmio bir haftalık yeni kelimeyi önceden planlar; böylece uygulamayı açmadığın günlerde de widget’ın yeni kelimeler getirir.</p>
+  </details>
+  <details>
+    <summary>Planımı, seviyemi ya da yeni kelime sayısını nasıl değiştiririm?</summary>
+    <p><em>Planın</em>’ı aç ve <em>Plan</em>, <em>Seviye</em> ya da <em>Yeni kelimeler</em>’i değiştir. Kaydettiğin kelimeler ve çalışma geçmişin kalır. Sınav planları belirli bir seviye aralığını kapsar; bu yüzden <em>Kelimelerin başlangıç seviyesi</em> senin seviyenden farklı olabilir. Örneğin IELTS kelimeleri B2’den başlar.</p>
+  </details>
+  <details>
+    <summary>Bugün daha fazla kelime öğrenebilir miyim?</summary>
+    <p>Evet. Bugünün yeni kelimelerini gördükten sonra Bugün ekranı beş kelime daha sunar; bir günde en fazla 20 yeni kelime. Bu kelimeler de diğerleri gibi tekrar için geri gelir, yani her biri önümüzdeki aylara birkaç kısa tekrar ekler. Pratik bekleyen çok kelime varsa, sen yetişene kadar bu öneri durur.</p>
+  </details>
+  <details>
+    <summary>Kelime kontrolü bir sınav mı?</summary>
+    <p>Hayır. Bir dakikalık kontrol hangi kelimeleri bildiğini sorar; tahminleri yakalamak için aralarına birkaç uydurma kelime karışır. Sonunda nereden başlayacağını önerir. Seviyeler tahmindir, resmî bir sonuç değildir ve sınav puanını öngörmez. Lexmio ileride cevaplarına göre daha kolay ya da daha zor bir seviye önerebilir. Seviyeni sormadan asla değiştirmez.</p>
+  </details>
+  <details>
+    <summary>Daha önce gördüğüm kelimeler neden yeniden çıkıyor?</summary>
+    <p>Planındaki bütün kelimeler gösterildiğinde Lexmio, bildiğin olarak işaretlemediklerini yeniden getirir. Planındaki her kelimeyi biliyorsan Bugün ekranı bunu söyler; <em>Planın</em>’dan başka bir plan seçebilirsin. Kaydettiğin ve çalıştığın kelimeler kalır.</p>
+  </details>
+
+  <h2>Öğrenme</h2>
+  <details>
+    <summary>Kelimeler arasında nasıl geçiş yaparım?</summary>
+    <p>Sonraki kelime için kartı sola, bir öncekine dönmek için sağa kaydır. Ayrıntıları görmek için yukarı kaydır: tanım ve örnek cümlenin çevirisi. VoiceOver kullanıyorsan kelimedeki <em>Sonraki kelime</em>, <em>Önceki kelime</em> ve <em>Kelime ayrıntıları</em> eylemlerini kullan.</p>
+  </details>
+  <details>
+    <summary>Pratik nasıl işliyor?</summary>
+    <p><em>Pratik</em> sekmesini aç ve <em>Bir dakika çalış</em>’a dokun. İngilizce kelimeyi gör, anlamını hatırlamaya çalış, sonra anlamı göster ve <em>Tekrar</em>, <em>Hatırladım</em> ya da <em>Kolay</em>’ı seç. Her cevap, kelimeyi ne zaman yeniden göreceğini gösterir: Tekrar için birkaç dakika, hatırlamaya devam ettikçe 1, 3, 7, 14, 30, 60 ve 120 gün. Çalıştığın kelimeler widget’ında yeni kelimelerin arasında da görünür. Yeni kelimeler üçüncü ve yedinci günlerinde widget’ına anlamları olmadan geri gelir: önce hatırlamaya çalış, sonra kontrol etmek için dokun.</p>
+  </details>
+  <details>
+    <summary>Bir kelimeyi zaten biliyorum.</summary>
+    <p>Kelimede <em>Biliyorum</em>’a dokun. Kelime artık yeni kelimelerin arasında görünmez; bunu Kelimeler sekmesinden istediğin zaman geri alabilirsin.</p>
+  </details>
+  <details>
+    <summary>Anlamlar ve örnekler nereden geliyor?</summary>
+    <p>İngilizce tanımlar, örnekler ve Türkçe çevirileri Lexmio için yazılır ve yayınlanmadan önce kontrol edilir. Türkçe anlamların birçoğu Vikisözlük’ten yararlanır. Bir kelimenin kaynakları, ayrıntılarındaki <em>Kaynaklar</em> bölümündedir; kullandığımız tüm kaynaklar <em>Planın → Kelime listeleri ve kaynaklar</em> bölümünde yer alır.</p>
+  </details>
+  <details>
+    <summary>“Dinle” ses çıkarmıyor.</summary>
+    <p>Kelimeler sessiz modda da çalar; Lexmio açıkken yan tuşlarla sesi aç. Kulaklık bağlıysa kelime kulaklıktan çalar. Lexmio İngilizce ses bulunamadığını söylüyorsa <em>Ayarlar → Erişilebilirlik → Sözlü İçerik → Sesler → İngilizce</em> bölümünden bir ses ekle.</p>
+  </details>
+
+  <h2>Abonelik</h2>
+  <details>
+    <summary>Ücretsiz hafta nasıl işliyor?</summary>
+    <p>Yeni aboneler için yıllık aboneliğin ilk haftası ücretsizdir. Sonra abonelik, sen iptal edene kadar, başlamadan önce gösterilen fiyatla her yıl yenilenir. Ücretsiz hafta bitmeden en az 24 saat önce iptal edersen ücret alınmaz. İstersen bunun yerine aylık abone olabilir ya da ömür boyu erişimi bir kez satın alabilirsin.</p>
+  </details>
+  <details>
+    <summary>Lexmio ücret alınmadan önce bana hatırlatır mı?</summary>
+    <p>Evet, bildirimlere izin verirsen. Ücretsiz haftan bitmeden iki gün önce Lexmio tarih ve yıllık fiyatla birlikte bir hatırlatma gönderir; Bugün ekranı da o andan itibaren aynı notu gösterir. Planın → Hatırlatmalar bölümünde, seçtiğin saatte isteğe bağlı günlük pratik hatırlatması da var; o gün zaten çalıştıysan gönderilmez. Tüm hatırlatmalar iPhone’unda planlanır.</p>
+  </details>
+  <details>
+    <summary>Aylık ile yıllık arasında geçiş yapabilir miyim?</summary>
+    <p>Evet. <em>Planın → Abonelik → Aboneliği yönet</em>’i aç ve diğer seçeneği seç. Değişikliği Apple yönetir; ne zaman başlayacağını ve ne ödeyeceğini gösterir.</p>
+  </details>
+  <details>
+    <summary>Nasıl iptal ederim?</summary>
+    <p>Lexmio’da <em>Planın → Abonelik → Aboneliği yönet</em>’i aç ya da <em>Ayarlar → [adın] → Abonelikler → Lexmio</em> bölümüne git. Lexmio, ödediğin dönemin sonuna kadar çalışmaya devam eder.</p>
+  </details>
+  <details>
+    <summary>iPhone’umu değiştirdim ya da Lexmio’yu yeniden yükledim.</summary>
+    <p>Aynı Apple Hesabı ile giriş yap ve abonelik ekranında <em>Geri yükle</em>’ye ya da <em>Planın → Abonelik → Satın alımları geri yükle</em>’ye dokun. Planın ve ilerlemen satın alımdan değil, iPhone yedeğinden geri gelir.</p>
+  </details>
+  <details>
+    <summary>Aboneliğim biterse ne olur?</summary>
+    <p>Planın, kayıtlı kelimelerin ve ilerlemen iPhone’unda kalır. Lexmio’yu açtığında abonelik ekranı görünür, widget da uygulamayı açmanı ister. Yeniden abone olduğunda kaldığın yerden devam edersin.</p>
+  </details>
+  <details>
+    <summary>Nasıl iade isterim?</summary>
+    <p>Ödemeleri ve iadeleri Apple yönetir. İade talebini <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> adresinden yapabilirsin.</p>
+  </details>
+
+  <h2>Verilerin</h2>
+  <details>
+    <summary>Hesaba ihtiyacım var mı? Verilerim yedekleniyor mu?</summary>
+    <p>Lexmio hesabı yok; satın alımlar Apple Hesabını kullanır. Planın, kayıtlı kelimelerin ve pratik geçmişin iPhone’unda kalır ve normal iPhone ya da iCloud yedeğine dahil edilir. Ayrıntılar için <a href="privacy.html#tr">gizlilik politikasına</a> ya da uygulamada <em>Planın → Gizlilik</em> bölümüne bak.</p>
+  </details>
+  <details>
+    <summary>Nasıl baştan başlarım?</summary>
+    <p><em>Planın → Bu iPhone’da Lexmio’yu sıfırla</em> bölümünü aç. Bu işlem planını, kayıtlı kelimelerini ve pratik geçmişini siler ve geri alınamaz. Aboneliği iptal etmez.</p>
+  </details>
+  <details>
+    <summary>Uygulamanın dilini İngilizce ile Türkçe arasında nasıl değiştiririm?</summary>
+    <p>Lexmio, iPhone’unun dilini kullanır. Yalnızca Lexmio için dil seçmek istersen <em>Planın → Uygulama dili</em>’ni aç ya da <em>Ayarlar → Uygulamalar → Lexmio → Dil</em> bölümüne git. Bu seçenek, <em>Ayarlar → Genel → Dil ve Bölge</em>’de birden fazla dil ekliyse görünür.</p>
+  </details>
+  <footer>Lexmio, Plainroot Studio · <a href="privacy.html#tr">Gizlilik politikası</a></footer>
+</section>
+</main>
+</body>
+</html>

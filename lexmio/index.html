@@ -149,6 +149,10 @@
   footer p { margin:0 0 10px; }
   .tm { font-size:.8rem; max-width:62em; }
 </style>
+<script>
+  // Turkish browsers open the Turkish page before anything is drawn.
+  try { if (!location.hash) { var l = (navigator.languages && navigator.languages[0]) || navigator.language || ""; if (/^tr\b/i.test(l)) location.replace("#tr"); } } catch (e) {}
+</script>
 </head>
 <body>
 
@@ -309,7 +313,7 @@
         <p class="soon">Ekim sonunda App Store’da</p>
         <p class="facts">Ücretsiz indir · iOS 17 ve sonrası yüklü iPhone · Türkçe ve İngilizce</p>
       </div>
-      <figure class="phone"><img loading="lazy" src="/lexmio/img/tr-widgets.webp" width="600" height="1304" alt="Üç Lexmio widget’ı olan bir iPhone Ana Ekranı: 7 günlük seri, automatic kelimesi ve Biliyorum ile Tekrar düğmeleriyle euro kelimesi."></figure>
+      <figure class="phone"><img src="/lexmio/img/tr-widgets.webp" width="600" height="1304" alt="Üç Lexmio widget’ı olan bir iPhone Ana Ekranı: 7 günlük seri, automatic kelimesi ve Biliyorum ile Tekrar düğmeleriyle euro kelimesi."></figure>
     </section>
 
     <section class="block" aria-labelledby="tr-how">
@@ -433,7 +437,7 @@
 </div>
 
 <script>
-  // Turkish browsers open the Turkish page; the links switch languages.
+  // The language links switch the page; the title and lang follow.
   (function () {
     var titles = { en: "Lexmio: English words on your Lock Screen", tr: "Lexmio: Kilit Ekranında İngilizce kelimeler" };
     function sync() {
@@ -441,12 +445,6 @@
       document.documentElement.lang = tr ? "tr" : "en";
       document.title = tr ? titles.tr : titles.en;
     }
-    try {
-      if (!location.hash) {
-        var l = (navigator.languages && navigator.languages[0]) || navigator.language || "";
-        if (/^tr\b/i.test(l)) location.replace("#tr");
-      }
-    } catch (e) {}
     sync();
     window.addEventListener("hashchange", sync);
   })();

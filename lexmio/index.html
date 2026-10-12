@@ -2,12 +2,454 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lexmio</title>
-<meta http-equiv="refresh" content="0; url=support">
-<link rel="canonical" href="support">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lexmio: English words on your Lock Screen</title>
+<meta name="description" content="Lexmio puts a useful English word and its meaning on your iPhone's Lock Screen and Home Screen. Explanations in simple English or Turkish. No account, no ads, no tracking.">
+<link rel="canonical" href="https://plainrootstudio.com/lexmio/">
+<meta name="apple-itunes-app" content="app-id=6822015059">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Plainroot Studio">
+<meta property="og:url" content="https://plainrootstudio.com/lexmio/">
+<meta property="og:title" content="Lexmio: English words on your Lock Screen">
+<meta property="og:description" content="A useful English word and its meaning, every time you check the time. Explanations in simple English or Turkish.">
+<meta property="og:image" content="https://plainrootstudio.com/lexmio/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lexmio's app icon, a fox, beside an iPhone showing Lexmio widgets.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="/lexmio/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/lexmio/img/apple-touch-icon.png">
+<link rel="preload" href="/lexmio/fonts/fraunces-display.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face {
+    font-family: "Fraunces Display";
+    src: url("/lexmio/fonts/fraunces-display.woff2") format("woff2");
+    font-weight: 400; font-style: normal; font-display: swap;
+  }
+  /* Lexmio 1.0 colour tokens, light and dark, from the app's asset catalog */
+  :root {
+    --canvas:#F4F6F1; --surface:#FFFFFF; --subtle:#E9EEE6; --ink:#17211B; --meaning:#3B4840; --secondary:#57645B;
+    --accent:#2E5B45; --accent-soft:#DCE9DD; --on-accent:#FFFFFF; --divider:#E1E6DD; --mark:#F3D58A; --mark-ink:#6B4E12;
+    --bezel:#1B1F1D; --shadow:rgba(23,33,27,.28);
+    --serif:"Fraunces Display", "New York", "Iowan Old Style", Georgia, serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --canvas:#101312; --surface:#1A1E1C; --subtle:#232826; --ink:#F1F4F2; --meaning:#DCE3DE; --secondary:#B7C1BA;
+      --accent:#8ED1A5; --accent-soft:#213229; --on-accent:#101312; --divider:#2D3330; --mark:#6E5622; --mark-ink:#F7E7BF;
+      --bezel:#000000; --shadow:rgba(0,0,0,.5);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin:0; background:var(--canvas); color:var(--ink); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; }
+  a { color:var(--accent); text-underline-offset:3px; }
+  a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:6px; }
+  .wrap { max-width:1080px; margin:0 auto; padding-inline:max(20px, env(safe-area-inset-left)); }
+  h1, h2, .serif { font-family:var(--serif); font-weight:400; }
+  h1 { font-size:clamp(2.6rem, 7vw, 4.4rem); line-height:1.02; letter-spacing:-.015em; margin:0 0 20px; text-wrap:balance; }
+  h2 { font-size:clamp(1.9rem, 4.2vw, 2.7rem); line-height:1.1; letter-spacing:-.01em; margin:0 0 14px; text-wrap:balance; }
+  h3 { font-size:1.08rem; line-height:1.35; margin:0 0 6px; }
+  p { margin:0 0 12px; }
+  .small { font-size:.9rem; color:var(--secondary); }
+
+  /* One language at a time: English unless #tr is the target */
+  #tr { display:none; }
+  #tr:target { display:block; }
+  body:has(#tr:target) #en { display:none; }
+
+  .top { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-block:18px; }
+  .brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-family:var(--serif); font-size:1.4rem; }
+  .brand img { width:36px; height:36px; border-radius:9px; }
+  .lang { display:flex; gap:6px; }
+  .lang a { padding:5px 12px; border:1px solid var(--divider); border-radius:999px; color:var(--secondary); text-decoration:none; font-size:.88rem; }
+  .lang a[aria-current="page"] { background:var(--surface); color:var(--ink); border-color:var(--secondary); }
+
+  .hero { display:grid; gap:44px; align-items:center; padding-block:28px 64px; }
+  @media (min-width: 860px) { .hero { grid-template-columns:1.2fr .8fr; padding-block:56px 96px; } }
+  .eyebrow { letter-spacing:.02em; font-size:.95rem; font-weight:700; color:var(--accent); margin:0 0 12px; }
+  .lede { font-size:1.2rem; line-height:1.55; color:var(--meaning); max-width:32em; margin:0 0 28px; }
+  .soon { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:var(--on-accent); padding:12px 20px; border-radius:999px; font-weight:600; font-size:clamp(.88rem, 3.6vw, 1rem); }
+  .soon::before { content:""; flex:none; width:8px; height:8px; border-radius:50%; background:#F3D58A; }
+  .facts { color:var(--secondary); font-size:.95rem; margin:16px 0 0; }
+
+  .phone { margin:0; background:var(--bezel); border-radius:46px; padding:10px; box-shadow:0 34px 60px -28px var(--shadow); }
+  .phone img { display:block; width:100%; border-radius:36px; }
+  .hero .phone { width:min(300px, 76vw); justify-self:center; }
+
+  .block { padding-block:56px; border-top:1px solid var(--divider); }
+  @media (min-width: 860px) { .block { padding-block:84px; } }
+  .intro { max-width:36em; color:var(--meaning); }
+
+  .steps { list-style:none; margin:28px 0 0; padding:0; display:grid; gap:16px; }
+  @media (min-width: 760px) { .steps { grid-template-columns:repeat(3, 1fr); gap:20px; } }
+  .steps li { background:var(--surface); border:1px solid var(--divider); border-radius:20px; padding:22px; }
+  .steps p { margin:0; color:var(--meaning); }
+  .num { display:grid; place-items:center; width:34px; height:34px; border-radius:50%; background:var(--accent-soft); color:var(--accent); font-weight:700; margin-bottom:14px; font-variant-numeric:tabular-nums; }
+
+  .gallery { list-style:none; margin:32px -20px 0; padding:4px 20px 12px; display:grid; grid-auto-flow:column; grid-auto-columns:min(62vw, 232px); gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding-inline:20px; scrollbar-width:none; }
+  .gallery::-webkit-scrollbar { display:none; }
+  .gallery li { scroll-snap-align:start; min-width:0; }
+  .gallery .phone { border-radius:32px; padding:7px; box-shadow:0 22px 40px -26px var(--shadow); }
+  .gallery .phone img { border-radius:25px; }
+  .gallery p { font-size:.92rem; line-height:1.45; color:var(--secondary); margin:14px 4px 0; }
+  @media (min-width: 1000px) { .gallery { grid-auto-flow:row; grid-template-columns:repeat(5, 1fr); overflow:visible; margin-inline:0; padding-inline:0; } }
+
+  .split { display:grid; gap:36px; align-items:center; }
+  @media (min-width: 860px) { .split { grid-template-columns:1fr 1fr; gap:72px; } }
+  .split > div:first-child p { color:var(--meaning); max-width:32em; }
+
+  .card { background:var(--surface); border:1px solid var(--divider); border-radius:24px; padding:24px; box-shadow:0 24px 44px -32px var(--shadow); }
+  .pos { color:var(--secondary); font-size:.85rem; margin:0; }
+  .word { font-family:var(--serif); font-size:2.7rem; line-height:1.1; margin:2px 0 18px; }
+  .modes { display:grid; gap:10px; }
+  .mode { background:var(--subtle); border-radius:14px; padding:12px 14px; margin:0; }
+  .label { display:block; text-transform:uppercase; letter-spacing:.08em; font-size:.7rem; font-weight:700; color:var(--secondary); margin-bottom:2px; }
+  .mode span:last-child { font-size:1.06rem; color:var(--meaning); }
+  .example { margin:16px 0 0; padding-top:14px; border-top:1px solid var(--divider); }
+  .example p { margin:0; }
+  .example p + p { color:var(--secondary); font-size:.95rem; margin-top:4px; }
+
+  .streak { display:grid; gap:16px; }
+  .streak-head { display:flex; align-items:center; gap:14px; }
+  .streak-head img { width:64px; }
+  .streak-title { font-family:var(--serif); font-size:1.7rem; line-height:1.1; margin:0; }
+  .streak-head p + p { margin:2px 0 0; }
+  .week { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(7, minmax(0, 1fr)); gap:6px; }
+  .week li { display:grid; justify-items:center; gap:6px; font-size:.75rem; font-weight:700; color:var(--secondary); }
+  .dot { width:34px; height:34px; border-radius:50%; display:grid; place-items:center; background:var(--mark); color:var(--mark-ink); }
+  .dot svg { width:16px; height:16px; }
+  .dot.rest { background:var(--subtle); color:var(--secondary); }
+  .dot.today { box-shadow:0 0 0 2px var(--surface), 0 0 0 4px var(--accent); }
+
+  .plans { display:grid; gap:18px; margin-top:28px; align-items:start; }
+  @media (min-width: 760px) { .plans { grid-template-columns:1fr 1fr; } }
+  .plan h3 { font-family:var(--serif); font-weight:400; font-size:1.7rem; margin:0 0 14px; display:flex; align-items:center; gap:10px; }
+  .plan.plus { border:2px solid var(--accent); }
+  .plan ul { margin:0; padding-left:1.1em; display:grid; gap:8px; color:var(--meaning); }
+  .plan li::marker { color:var(--accent); }
+  .note { margin:18px 0 0; color:var(--secondary); font-size:.92rem; }
+
+  .private { display:grid; gap:28px; align-items:center; }
+  @media (min-width: 760px) { .private { grid-template-columns:auto 1fr; gap:56px; } }
+  .private img { width:150px; }
+  .private p { color:var(--meaning); max-width:34em; }
+
+  .press dl { margin:24px 0; border-top:1px solid var(--divider); }
+  .press dl div { display:grid; grid-template-columns:9rem minmax(0, 1fr); gap:16px; padding:12px 0; border-bottom:1px solid var(--divider); }
+  @media (max-width: 520px) { .press dl div { grid-template-columns:1fr; gap:2px; } }
+  .press dt { color:var(--secondary); font-size:.92rem; }
+  .press dd { margin:0; }
+  .download { display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; }
+  .button { display:inline-block; padding:10px 18px; border-radius:999px; border:1.5px solid var(--accent); color:var(--accent); font-weight:600; text-decoration:none; }
+
+  footer { border-top:1px solid var(--divider); padding-block:28px 48px; color:var(--secondary); font-size:.9rem; }
+  footer p { margin:0 0 10px; }
+  .tm { font-size:.8rem; max-width:62em; }
+</style>
 </head>
 <body>
-<p><a href="support">Lexmio support</a> · <a href="privacy">Privacy policy</a></p>
+
+<div id="en" lang="en">
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/lexmio/"><img src="/lexmio/img/icon.png" alt="" width="36" height="36">Lexmio</a>
+    <nav class="lang" aria-label="Language"><a href="#en" aria-current="page">English</a><a href="#tr" lang="tr" hreflang="tr">Türkçe</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Lexmio for iPhone</p>
+        <h1>English words on your Lock Screen</h1>
+        <p class="lede">Every time you check the time, there’s a useful word and its meaning. Open it for an example and how it sounds, and it comes back on day 3 and day 7 to check it stuck.</p>
+        <!-- At release, replace this line with Apple's "Download on the App Store" badge linking to https://apps.apple.com/app/id6822015059 -->
+        <p class="soon">Coming to the App Store in late October</p>
+        <p class="facts">Free to download · iPhone with iOS 17 or later · In English and Turkish</p>
+      </div>
+      <figure class="phone"><img src="/lexmio/img/en-widgets.webp" width="600" height="1304" alt="An iPhone Home Screen with three Lexmio widgets: a 7-day streak, the word automatic, and the word euro with Know it and Again buttons."></figure>
+    </section>
+
+    <section class="block" aria-labelledby="en-how">
+      <h2 id="en-how">Learn in moments you already have</h2>
+      <ol class="steps">
+        <li><span class="num">1</span><h3>Add a widget</h3><p>Put Lexmio below the clock on your Lock Screen, or on your Home Screen.</p></li>
+        <li><span class="num">2</span><h3>Glance through the day</h3><p>A word and its meaning are there whenever you pick up your phone, and new ones arrive through the day.</p></li>
+        <li><span class="num">3</span><h3>Make it stick</h3><p>Open a word for its example and pronunciation. It comes back on day 3 and day 7 to check you still know it.</p></li>
+      </ol>
+    </section>
+
+    <section class="block" aria-labelledby="en-look">
+      <h2 id="en-look">A closer look</h2>
+      <ul class="gallery">
+        <li><figure class="phone"><img loading="lazy" src="/lexmio/img/en-today.webp" width="600" height="1304" alt="Today: the word textbook with its meaning, an example sentence, and Listen, Save and I know it."></figure><p>Today’s words, with a meaning, an example and how each one sounds</p></li>
+        <li><figure class="phone"><img loading="lazy" src="/lexmio/img/en-cloze.webp" width="600" height="1304" alt="Fill in the blank: Not having a car can be a blank in the countryside, with letter tiles and a hint."></figure><p>Fill in the blank from the word’s own example, with a letter hint · Plus</p></li>
+        <li><figure class="phone"><img loading="lazy" src="/lexmio/img/en-path.webp" width="600" height="1304" alt="Practice: set 4 of the Everyday English path, with stars on finished sets."></figure><p>A practice path in sets of ten, with a level check every five sets · Plus</p></li>
+        <li><figure class="phone"><img loading="lazy" src="/lexmio/img/en-progress.webp" width="600" height="1304" alt="Progress: a 7-day streak, the week's days, 7 of 10 words today and the words met so far."></figure><p>Your streak, your week and the words you’ve met</p></li>
+        <li><figure class="phone"><img loading="lazy" src="/lexmio/img/en-decks.webp" width="600" height="1304" alt="Decks: Everyday English, Work, Travel, Academic study, IELTS, TOEFL, SAT and GRE, with level and daily goal."></figure><p>Decks for everyday English, work, travel, academic study and exams</p></li>
+      </ul>
+    </section>
+
+    <section class="block split" aria-labelledby="en-explain">
+      <div>
+        <h2 id="en-explain">Explained your way</h2>
+        <p>Choose how words are explained: a short meaning in simple English, or a Turkish meaning with translated examples. The app itself is in English and Turkish.</p>
+        <p>Start at your level, from A1 to C2, or take the one-minute word check. When words feel easy, Lexmio suggests moving up.</p>
+      </div>
+      <div class="card" role="img" aria-label="A word card for textbook, explained in simple English and in Turkish.">
+        <p class="pos">noun · A2</p>
+        <p class="word">textbook</p>
+        <div class="modes">
+          <p class="mode"><span class="label">Simple English</span><span>a printed course guide used in class</span></p>
+          <p class="mode"><span class="label">Turkish</span><span lang="tr">ders kitabı</span></p>
+        </div>
+        <div class="example">
+          <p>Every pupil gets a free maths textbook in September.</p>
+          <p lang="tr">Her öğrenci eylülde ücretsiz bir matematik ders kitabı alıyor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block split" aria-labelledby="en-streak">
+      <div>
+        <h2 id="en-streak">A streak that survives a busy day</h2>
+        <p>Every day has a goal: 5 words on the free plan, up to 30 with Plus. Three words keep your streak, and one missed day a week is a rest day, so a busy day never breaks it.</p>
+        <p>Every word you look at, answer or mark on a widget counts. Mio the fox cheers each milestone.</p>
+      </div>
+      <div class="card streak" role="img" aria-label="A 7-day streak: five days done, a rest day on Saturday and today done.">
+        <div class="streak-head">
+          <img src="/lexmio/img/fox-cheer.webp" width="294" height="360" alt="">
+          <div><p class="streak-title">7-day streak</p><p class="small">Best: 7 days</p></div>
+        </div>
+        <ol class="week">
+          <li><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>M</li>
+          <li><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>T</li>
+          <li><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>W</li>
+          <li><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>T</li>
+          <li><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>F</li>
+          <li><span class="dot rest"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M10.6 2.2a6 6 0 1 0 3.2 9.6A5 5 0 0 1 10.6 2.2z"/></svg></span>S</li>
+          <li><span class="dot today"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>S</li>
+        </ol>
+        <p class="small">3 words a day keep your streak. This week’s rest day is used.</p>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="en-plans">
+      <h2 id="en-plans">Free to start</h2>
+      <div class="plans">
+        <article class="card plan">
+          <h3>Free</h3>
+          <ul>
+            <li>Everyday English at any level, A1 to C2: 2,471 words, 5 new ones a day</li>
+            <li>Lock Screen and Home Screen widgets, and a progress widget with your goal and streak</li>
+            <li>Word cards with examples and pronunciation, saved words, the daily goal and the streak</li>
+            <li>Every word comes back on day 3 and day 7 to check it stuck</li>
+          </ul>
+        </article>
+        <article class="card plan plus">
+          <h3>Lexmio Plus</h3>
+          <ul>
+            <li>Every deck: IELTS, TOEFL, Academic, Work and Travel, core lists for the SAT and GRE, and a core YDS / YÖKDİL list with Turkish explanations</li>
+            <li>Up to 50 new words a day, with a daily goal of 5 to 30</li>
+            <li>The practice path: fill in the blank with letter hints, stars and a level check every five sets</li>
+            <li>Reviews that bring words back after 2 weeks, a month and beyond</li>
+            <li>Interactive widgets: show the meaning, then Know it or Again, plus widgets for saved words or words due for review</li>
+          </ul>
+          <p class="note">Starts with a free week on the yearly plan, for new subscribers. Monthly and one-time lifetime options too.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block private" aria-labelledby="en-private">
+      <img src="/lexmio/img/fox-reading.webp" width="327" height="360" alt="">
+      <div>
+        <h2 id="en-private">Nothing to sign up for</h2>
+        <p>No account, no ads, no tracking. Lexmio works offline, and your words and progress stay on your iPhone. It collects no data.</p>
+        <p><a href="/lexmio/privacy">Read the privacy policy</a></p>
+      </div>
+    </section>
+
+    <section class="block press" aria-labelledby="en-press">
+      <h2 id="en-press">For press</h2>
+      <dl>
+        <div><dt>Developer</dt><dd>Plainroot Studio, Ankara, Türkiye</dd></div>
+        <div><dt>Release</dt><dd>Late October 2026</dd></div>
+        <div><dt>Platform</dt><dd>iPhone, iOS 17 or later</dd></div>
+        <div><dt>Price</dt><dd>Free, with Lexmio Plus subscriptions and a one-time lifetime purchase</dd></div>
+        <div><dt>Languages</dt><dd>English, Turkish</dd></div>
+        <div><dt>Contact</dt><dd><a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a></dd></div>
+      </dl>
+      <p class="download"><a class="button" href="/lexmio/press/lexmio-press-kit.zip" download>Download the press kit</a><span class="small">App icon and 12 screenshots in English and Turkish · ZIP, 2.3 MB</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Plainroot Studio · <a href="/lexmio/support">Support</a> · <a href="/lexmio/privacy">Privacy</a></p>
+    <p class="tm">IELTS is a registered trademark of the British Council, IDP IELTS and Cambridge University Press &amp; Assessment. TOEFL and GRE are registered trademarks of ETS. SAT is a registered trademark of the College Board. YDS and YÖKDİL are exams run by ÖSYM. Lexmio is not affiliated with or endorsed by any of these organizations.</p>
+  </footer>
+</div>
+</div>
+
+<div id="tr" lang="tr">
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/lexmio/#tr"><img src="/lexmio/img/icon.png" alt="" width="36" height="36">Lexmio</a>
+    <nav class="lang" aria-label="Dil"><a href="#en" lang="en" hreflang="en">English</a><a href="#tr" aria-current="page">Türkçe</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">iPhone için Lexmio</p>
+        <h1>Kilit Ekranında İngilizce kelimeler</h1>
+        <p class="lede">Saate her baktığında işine yarayacak bir kelime ve anlamı orada. Açınca örneğini ve okunuşunu görürsün; kelime, aklında kaldı mı diye 3. ve 7. günde yeniden gelir.</p>
+        <!-- Çıkışta bu satırın yerine https://apps.apple.com/app/id6822015059 bağlantılı "App Store'dan İndirin" rozeti gelecek -->
+        <p class="soon">Ekim sonunda App Store’da</p>
+        <p class="facts">Ücretsiz indir · iOS 17 ve sonrası yüklü iPhone · Türkçe ve İngilizce</p>
+      </div>
+      <figure class="phone"><img loading="lazy" src="/lexmio/img/tr-widgets.webp" width="600" height="1304" alt="Üç Lexmio widget’ı olan bir iPhone Ana Ekranı: 7 günlük seri, automatic kelimesi ve Biliyorum ile Tekrar düğmeleriyle euro kelimesi."></figure>
+    </section>
+
+    <section class="block" aria-labelledby="tr-how">
+      <h2 id="tr-how">Gün içindeki küçük anlarda öğren</h2>
+      <ol class="steps">
+        <li><span class="num">1</span><h3>Widget’ı ekle</h3><p>Lexmio’yu Kilit Ekranında saatin altına ya da Ana Ekranına ekle.</p></li>
+        <li><span class="num">2</span><h3>Gün boyu göz at</h3><p>Telefonunu her eline aldığında bir kelime ve anlamı orada; gün içinde yenileri gelir.</p></li>
+        <li><span class="num">3</span><h3>Aklında kalsın</h3><p>Bir kelimeyi açınca örneğini ve okunuşunu gör. Hâlâ biliyor musun diye 3. ve 7. günde yeniden gelir.</p></li>
+      </ol>
+    </section>
+
+    <section class="block" aria-labelledby="tr-look">
+      <h2 id="tr-look">Yakından bak</h2>
+      <ul class="gallery">
+        <li><figure class="phone"><img loading="lazy" src="/lexmio/img/tr-today.webp" width="600" height="1304" alt="Bugün: textbook kelimesi, Türkçe anlamı ders kitabı, örnek cümlesi; Dinle, Kaydet ve Biliyorum."></figure><p>Bugünün kelimeleri: anlamı, örneği ve okunuşuyla</p></li>
+        <li><figure class="phone"><img loading="lazy" src="/lexmio/img/tr-cloze.webp" width="600" height="1304" alt="Boşluk doldurma: harf kutucukları ve ipucuyla bir örnek cümle."></figure><p>Kelimenin kendi örneğinden, harf ipuçlu boşluk doldurma · Plus</p></li>
+        <li><figure class="phone"><img loading="lazy" src="/lexmio/img/tr-path.webp" width="600" height="1304" alt="Pratik: Günlük İngilizce yolunda 4. set; biten setlerde yıldızlar."></figure><p>Onar kelimelik setlerle pratik yolu; her beş sette bir seviye kontrolü · Plus</p></li>
+        <li><figure class="phone"><img loading="lazy" src="/lexmio/img/tr-progress.webp" width="600" height="1304" alt="İlerleme: 7 günlük seri, haftanın günleri, bugün 7 / 10 kelime ve karşılaşılan kelimeler."></figure><p>Serin, haftan ve karşılaştığın kelimeler</p></li>
+        <li><figure class="phone"><img loading="lazy" src="/lexmio/img/tr-decks.webp" width="600" height="1304" alt="Desteler: Günlük İngilizce, İş, Seyahat, Akademik çalışma, YDS / YÖKDİL, IELTS, TOEFL, SAT ve GRE; seviye ve günlük hedef."></figure><p>Günlük İngilizce, iş, seyahat, akademik ve sınav desteleri</p></li>
+      </ul>
+    </section>
+
+    <section class="block split" aria-labelledby="tr-explain">
+      <div>
+        <h2 id="tr-explain">Sana uygun açıklama</h2>
+        <p>Kelimelerin nasıl açıklanacağını sen seç: Türkçe anlam ve çevrilmiş örnekler ya da basit İngilizceyle kısa bir anlam. Uygulama Türkçe ve İngilizce.</p>
+        <p>A1’den C2’ye kendi seviyenden başla ya da bir dakikalık kelime kontrolünü yap. Kelimeler kolay gelince Lexmio bir üst seviyeyi önerir.</p>
+      </div>
+      <div class="card" role="img" aria-label="textbook kelimesinin kartı: Türkçe ve basit İngilizce açıklamasıyla.">
+        <p class="pos">noun · A2</p>
+        <p class="word" lang="en">textbook</p>
+        <div class="modes">
+          <p class="mode"><span class="label">Türkçe</span><span>ders kitabı</span></p>
+          <p class="mode"><span class="label">Basit İngilizce</span><span lang="en">a printed course guide used in class</span></p>
+        </div>
+        <div class="example">
+          <p lang="en">Every pupil gets a free maths textbook in September.</p>
+          <p>Her öğrenci eylülde ücretsiz bir matematik ders kitabı alıyor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block split" aria-labelledby="tr-streak">
+      <div>
+        <h2 id="tr-streak">Yoğun bir günde bile bozulmayan seri</h2>
+        <p>Her günün bir hedefi var: ücretsiz planda 5 kelime, Plus ile 30’a kadar. Serin için günde 3 kelime yeter; haftada bir kaçırdığın gün dinlenme günü sayılır, yoğun bir gün serini bozmaz.</p>
+        <p>Baktığın, cevapladığın ya da widget’ta işaretlediğin her kelime sayılır. Tilki Mio her dönüm noktasında seninle sevinir.</p>
+      </div>
+      <div class="card streak" role="img" aria-label="7 günlük seri: beş gün tamam, cumartesi dinlenme günü, bugün tamam.">
+        <div class="streak-head">
+          <img src="/lexmio/img/fox-cheer.webp" width="294" height="360" alt="">
+          <div><p class="streak-title">7 günlük seri</p><p class="small">En iyi: 7 gün</p></div>
+        </div>
+        <ol class="week">
+          <li><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>P</li>
+          <li><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>S</li>
+          <li><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>Ç</li>
+          <li><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>P</li>
+          <li><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>C</li>
+          <li><span class="dot rest"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M10.6 2.2a6 6 0 1 0 3.2 9.6A5 5 0 0 1 10.6 2.2z"/></svg></span>C</li>
+          <li><span class="dot today"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span>P</li>
+        </ol>
+        <p class="small">Serin için günde 3 kelime yeter. Bu haftaki dinlenme gününü kullandın.</p>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="tr-plans">
+      <h2 id="tr-plans">Ücretsiz başla</h2>
+      <div class="plans">
+        <article class="card plan">
+          <h3>Ücretsiz</h3>
+          <ul>
+            <li>A1’den C2’ye her seviyede Günlük İngilizce: 2.471 kelime, günde 5 yeni kelime</li>
+            <li>Kilit Ekranı ve Ana Ekran widget’ları; hedefini ve serini gösteren ilerleme widget’ı</li>
+            <li>Örnekli ve telaffuzlu kelime kartları, kaydettiğin kelimeler, günlük hedef ve seri</li>
+            <li>Her kelime, akılda kaldı mı diye 3. ve 7. günde yeniden gelir</li>
+          </ul>
+        </article>
+        <article class="card plan plus">
+          <h3>Lexmio Plus</h3>
+          <ul>
+            <li>Tüm desteler: Türkçe açıklamalı YDS / YÖKDİL temel listesi, IELTS, TOEFL, Akademik, İş ve Seyahat; SAT ve GRE için temel listeler</li>
+            <li>Günde 50 yeni kelimeye kadar; 5 ile 30 arasında günlük hedef</li>
+            <li>Pratik yolu: harf ipuçlu boşluk doldurma, yıldızlar ve her beş sette bir seviye kontrolü</li>
+            <li>Kelimeleri 2 hafta, 1 ay ve sonrasında yeniden getiren tekrarlar</li>
+            <li>Etkileşimli widget’lar: anlamı göster, sonra Biliyorum ya da Tekrar; kaydettiğin ya da tekrar zamanı gelen kelimeler için widget’lar</li>
+          </ul>
+          <p class="note">Yıllık abonelikte ücretsiz bir haftayla başlar (yalnızca yeni aboneler için). Aylık abonelik ve tek seferlik ömür boyu erişim de var.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block private" aria-labelledby="tr-private">
+      <img loading="lazy" src="/lexmio/img/fox-reading.webp" width="327" height="360" alt="">
+      <div>
+        <h2 id="tr-private">Üye olmana gerek yok</h2>
+        <p>Hesap yok, reklam yok, takip yok. Lexmio internetsiz çalışır; kelimelerin ve ilerlemen iPhone’unda kalır. Hiçbir veri toplamaz.</p>
+        <p><a href="/lexmio/privacy#tr">Gizlilik politikasını oku</a></p>
+      </div>
+    </section>
+
+    <section class="block press" aria-labelledby="tr-press">
+      <h2 id="tr-press">Basın için</h2>
+      <dl>
+        <div><dt>Geliştirici</dt><dd>Plainroot Studio, Ankara</dd></div>
+        <div><dt>Çıkış</dt><dd>Ekim 2026 sonu</dd></div>
+        <div><dt>Platform</dt><dd>iPhone, iOS 17 ve sonrası</dd></div>
+        <div><dt>Fiyat</dt><dd>Ücretsiz; Lexmio Plus abonelikleri ve tek seferlik ömür boyu erişim</dd></div>
+        <div><dt>Diller</dt><dd>Türkçe, İngilizce</dd></div>
+        <div><dt>İletişim</dt><dd><a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a></dd></div>
+      </dl>
+      <p class="download"><a class="button" href="/lexmio/press/lexmio-press-kit.zip" download>Basın kitini indir</a><span class="small">Uygulama simgesi, Türkçe ve İngilizce 12 ekran görüntüsü · ZIP, 2,3 MB</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Plainroot Studio · <a href="/lexmio/support#tr">Destek</a> · <a href="/lexmio/privacy#tr">Gizlilik</a></p>
+    <p class="tm">IELTS; British Council, IDP IELTS ve Cambridge University Press &amp; Assessment’ın tescilli markasıdır. TOEFL ve GRE, ETS’nin tescilli markalarıdır. SAT, College Board’un tescilli markasıdır. YDS ve YÖKDİL, ÖSYM’nin düzenlediği sınavlardır. Lexmio bu kuruluşların hiçbiriyle bağlantılı değildir ve onlar tarafından onaylanmamıştır.</p>
+  </footer>
+</div>
+</div>
+
+<script>
+  // Turkish browsers open the Turkish page; the links switch languages.
+  (function () {
+    var titles = { en: "Lexmio: English words on your Lock Screen", tr: "Lexmio: Kilit Ekranında İngilizce kelimeler" };
+    function sync() {
+      var tr = location.hash === "#tr";
+      document.documentElement.lang = tr ? "tr" : "en";
+      document.title = tr ? titles.tr : titles.en;
+    }
+    try {
+      if (!location.hash) {
+        var l = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+        if (/^tr\b/i.test(l)) location.replace("#tr");
+      }
+    } catch (e) {}
+    sync();
+    window.addEventListener("hashchange", sync);
+  })();
+</script>
 </body>
 </html>

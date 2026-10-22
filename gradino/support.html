@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gradino Support</title>
+<meta name="description" content="Help with Gradino: logging doses, reminders, your data and Apple Health, Premium, widgets and the pill timer.">
+<style>
+  :root { --canvas:#F4F4F4; --surface:#FFFFFF; --ink:#171717; --secondary:#525252; --accent:#0C4F33; --divider:#DCDCDC; color-scheme:light dark; }
+  @media (prefers-color-scheme: dark) {
+    :root { --canvas:#111111; --surface:#1C1C1C; --ink:#EDEDED; --secondary:#A3A3A3; --accent:#84D2A5; --divider:#2E2E2E; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--canvas); color:var(--ink); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:40px 20px 64px; }
+  h1, h2 { font-weight:650; line-height:1.2; letter-spacing:-0.01em; }
+  h1 { font-size:2.1rem; margin:0 0 8px; }
+  h2 { font-size:1.3rem; margin:36px 0 12px; }
+  p, li { margin:0 0 10px; }
+  a { color:var(--accent); }
+  .meta { color:var(--secondary); }
+  .lang { display:flex; gap:12px; margin:16px 0 8px; }
+  .lang a { padding:6px 14px; border:1px solid var(--divider); border-radius:999px; text-decoration:none; }
+  .contact { background:var(--surface); border:1px solid var(--divider); border-radius:16px; padding:16px 20px; margin:24px 0; }
+  .contact p:last-child, details p:last-child { margin-bottom:0; }
+  details { background:var(--surface); border:1px solid var(--divider); border-radius:14px; padding:12px 16px; margin:0 0 10px; }
+  summary { cursor:pointer; font-weight:600; }
+  details[open] summary { margin-bottom:8px; }
+  hr { border:0; border-top:1px solid var(--divider); margin:56px 0; }
+  footer { color:var(--secondary); font-size:.9rem; border-top:1px solid var(--divider); margin-top:48px; padding-top:16px; }
+</style>
+</head>
+<body>
+<main>
+<section id="en" lang="en">
+  <h1>Gradino Support</h1>
+  <p class="meta">A private log for your medicine: doses, injection sites, side effects and weight, kept on your iPhone.</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a></nav>
+
+  <div class="contact">
+    <p><strong>Need help?</strong> Write to <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a>. Tell us your iPhone model, your iOS version and what happened; a screenshot helps. Please leave out anything about your health that we don’t need to help you.</p>
+  </div>
+
+  <h2>Doses</h2>
+  <details open>
+    <summary>Does the app tell me what dose to take, or when?</summary>
+    <p>No. It logs the doses your prescriber gave you, as printed on your box, and shows when the next one is due by your own schedule. It never calculates, converts or suggests a dose or a time, and it doesn’t give medical advice. Talk to your doctor before changing when or how much you take.</p>
+  </details>
+  <details>
+    <summary>How do I log a dose?</summary>
+    <p>Tap <em>Log dose</em> on Today. You can also log from a reminder, from the widget’s Log button with Premium, or by asking Siri: “Log a dose in Gradino”. The time moves in 5-minute steps, and the next site in your rotation is chosen for you.</p>
+  </details>
+  <details>
+    <summary>I logged a dose by mistake.</summary>
+    <p>Tap <em>Undo</em> on Today; it stays there until your next log. To change or delete an older dose, open it in the Journal.</p>
+  </details>
+  <details>
+    <summary>My dose or my schedule changed.</summary>
+    <p>Open your medicine by tapping its name on Today. Use <em>New dose</em> when your prescriber gives you one, or <em>Edit</em> to change the schedule from a day you choose. Earlier doses stay as they were, and the history keeps every change. <em>Pause this medicine</em> stops its reminders until you resume it.</p>
+  </details>
+  <details>
+    <summary>My medicine isn’t in the list.</summary>
+    <p>Choose <em>Other or compounded</em> at the top of setup and type its name, its form and the dose exactly as your prescription says. The list has medicines sold in the United States and Türkiye, typed from their official labels.</p>
+  </details>
+
+  <h2>Reminders</h2>
+  <details>
+    <summary>My reminders don’t arrive.</summary>
+    <p>On your iPhone, open <em>Settings → Notifications → Gradino</em> and allow notifications, including Time Sensitive Notifications. Reminders are Time Sensitive, so they can come through a Focus that allows Time Sensitive Notifications. When notifications are off, Today says “Reminders are off” with a button to turn them on.</p>
+  </details>
+  <details>
+    <summary>What do the buttons on a reminder do?</summary>
+    <p><em>Log</em> records the dose as taken now, and <em>Snooze 1 hour</em> reminds you again in an hour; both ask you to unlock your iPhone first. If nothing is logged, a follow-up comes 30 minutes later.</p>
+  </details>
+  <details>
+    <summary>What is discreet mode?</summary>
+    <p><em>Settings → Discreet mode</em> keeps medicine and health words off your Lock Screen, out of notifications and out of widgets. A reminder just says “Reminder”.</p>
+  </details>
+
+  <h2>Your data</h2>
+  <details>
+    <summary>Where is my data kept?</summary>
+    <p>Only on your iPhone. There is no account and no server, and the app doesn’t sync through iCloud. The <a href="privacy">privacy policy</a> has the details.</p>
+  </details>
+  <details>
+    <summary>How do I move to a new iPhone?</summary>
+    <p>Before you switch, open <em>Settings → Your data → Save a backup file</em> and keep the file where the new iPhone can reach it, such as Files or an email to yourself. On the new iPhone, install the app and finish setup, then choose <em>Settings → Your data → Import a backup</em>: it replaces what’s there with everything in the file. A device backup, through iCloud Backup or a computer, includes the app’s data too. The monthly backup reminder helps you keep a recent file.</p>
+  </details>
+  <details>
+    <summary>Can I export my records?</summary>
+    <p><em>Settings → Your data → Export as CSV</em> makes a spreadsheet of your doses, dose changes, check-ins, weights and boxes. The backup file is the full copy to import.</p>
+  </details>
+  <details>
+    <summary>How does Apple Health work with the app?</summary>
+    <p>Turn on <em>Settings → Weight → Apple Health</em> to read your weight from Health and save the weights you add there. The app uses weight only. To change what it may read or write, open the Health app and look under your profile’s apps.</p>
+  </details>
+  <details>
+    <summary>How do I delete everything?</summary>
+    <p><em>Settings → Your data → Delete all data</em> removes every record and setting from this iPhone, and the app starts again at setup. Weights already saved to Apple Health stay there until you delete them in the Health app.</p>
+  </details>
+
+  <h2>Premium</h2>
+  <details>
+    <summary>What’s free, and what comes with Premium?</summary>
+    <p>Free, and staying free: setup, schedules, logging with Undo, sites and your rotation, side effects and check-ins, weight with Apple Health, reminders, the Face ID lock, discreet mode, and export and import. Premium adds widgets with a Log button, the pill timer, Patterns, the doctor report, several medicines and supply.</p>
+  </details>
+  <details>
+    <summary>How does the free week work?</summary>
+    <p>The yearly plan starts with a free week for new subscribers. The app reminds you two days before it ends, and you can cancel any time before then; <em>Settings → Premium → Manage</em> takes you to your subscription.</p>
+  </details>
+  <details>
+    <summary>How do I cancel?</summary>
+    <p>In the app, <em>Settings → Premium → Manage</em>; or on your iPhone, <em>Settings → your name → Subscriptions</em>. Premium stays until the end of the period you’ve paid for.</p>
+  </details>
+  <details>
+    <summary>I changed iPhones or reinstalled the app.</summary>
+    <p>Premium follows your Apple Account. If it doesn’t show, open <em>Settings → See Premium</em> and tap <em>Restore purchase</em>.</p>
+  </details>
+  <details>
+    <summary>What happens if my subscription ends?</summary>
+    <p>Your records stay, and everything free keeps working. Widgets, the pill timer, Patterns, the report and supply lock again, and with several medicines the first in your order stays open.</p>
+  </details>
+
+  <h2>Widgets and the pill timer</h2>
+  <details>
+    <summary>How do I add the widget?</summary>
+    <p>On the Home Screen: touch and hold an empty spot, tap <em>Edit → Add Widget</em>, then choose Gradino and a size. On the Lock Screen: touch and hold it, tap <em>Customize → Lock Screen</em>, tap the area under the clock, then choose Gradino. The widget shows your next dose, and its Log button logs it. Widgets come with Premium.</p>
+  </details>
+  <details>
+    <summary>What is the pill timer?</summary>
+    <p>For a tablet whose label says to wait before eating, Today shows the wait on every plan. With Premium, Today counts it down after you log the tablet, and the countdown shows on your Lock Screen and in the Dynamic Island too. It times the wait your label gives; it says nothing about the dose.</p>
+  </details>
+
+  <footer>Gradino by Plainroot Studio · <a href="privacy">Privacy policy</a></footer>
+</section>
+
+<hr>
+
+<section id="tr" lang="tr">
+  <h1>Gradino Destek</h1>
+  <p class="meta">İlacınız için gizli bir kayıt: dozlar, enjeksiyon bölgeleri, yan etkiler ve kilo, iPhone’unuzda.</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a></nav>
+
+  <div class="contact">
+    <p><strong>Yardım mı gerekiyor?</strong> <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a> adresine yazın. iPhone modelinizi, iOS sürümünüzü ve ne olduğunu belirtin; bir ekran görüntüsü de yardımcı olur. Size yardım etmemiz için gerekmeyen sağlık bilgilerini lütfen paylaşmayın.</p>
+  </div>
+
+  <h2>Dozlar</h2>
+  <details open>
+    <summary>Uygulama hangi dozu ne zaman almam gerektiğini söyler mi?</summary>
+    <p>Hayır. Doktorunuzun verdiği dozları kutunuzda yazdığı gibi kaydeder ve bir sonrakinin ne zaman olduğunu kendi programınıza göre gösterir. Hiçbir zaman doz ya da saat hesaplamaz, dönüştürmez veya önermez; tıbbi tavsiye de vermez. Ne zaman veya ne kadar kullandığınızı değiştirmeden önce doktorunuzla konuşun.</p>
+  </details>
+  <details>
+    <summary>Bir dozu nasıl kaydederim?</summary>
+    <p>Bugün ekranında <em>Dozu kaydet</em>’e dokunun. Bir hatırlatıcıdan, Premium ile araç takımındaki Kaydet düğmesinden ya da Siri’ye “Gradino ile doz kaydet” diyerek de kaydedebilirsiniz. Saat 5 dakikalık adımlarla değişir ve sıranızdaki bir sonraki bölge sizin için seçilir.</p>
+  </details>
+  <details>
+    <summary>Bir dozu yanlışlıkla kaydettim.</summary>
+    <p>Bugün ekranında <em>Geri al</em>’a dokunun; bir sonraki kaydınıza kadar orada durur. Daha eski bir dozu değiştirmek ya da silmek için onu Günlük’te açın.</p>
+  </details>
+  <details>
+    <summary>Dozum ya da programım değişti.</summary>
+    <p>İlacınızı Bugün ekranında adına dokunarak açın. Doktorunuz yeni bir doz verdiğinde <em>Yeni doz</em>’u, programı seçtiğiniz bir günden itibaren değiştirmek için <em>Düzenle</em>’yi kullanın. Önceki dozlar olduğu gibi kalır ve geçmiş her değişikliği saklar. <em>Bu ilacı duraklat</em>, siz yeniden başlatana kadar ilacın hatırlatıcılarını durdurur.</p>
+  </details>
+  <details>
+    <summary>İlacım listede yok.</summary>
+    <p>Kurulumun başında <em>Diğer veya eczanede hazırlanan</em>’ı seçin ve ilacın adını, biçimini ve dozunu reçetenizde yazdığı gibi girin. Listede Amerika Birleşik Devletleri’nde ve Türkiye’de satılan, resmî prospektüslerinden girilmiş ilaçlar var.</p>
+  </details>
+
+  <h2>Hatırlatıcılar</h2>
+  <details>
+    <summary>Hatırlatıcılarım gelmiyor.</summary>
+    <p>iPhone’unuzda <em>Ayarlar → Bildirimler → Gradino</em> bölümünü açın ve Zamana Duyarlı Bildirimler dahil bildirimlere izin verin. Hatırlatıcılar Zamana Duyarlı’dır, bu yüzden Zamana Duyarlı Bildirimlere izin veren bir Odak açıkken de gelebilir. Bildirimler kapalıyken Bugün ekranında, açmanız için bir düğmeyle birlikte “Hatırlatıcılar kapalı” yazar.</p>
+  </details>
+  <details>
+    <summary>Hatırlatıcıdaki düğmeler ne yapar?</summary>
+    <p><em>Kaydet</em>, dozu şimdi alınmış olarak kaydeder; <em>1 saat ertele</em> bir saat sonra yeniden hatırlatır. İkisi de önce iPhone’unuzun kilidini açmanızı ister. Hiçbir şey kaydedilmezse 30 dakika sonra bir hatırlatma daha gelir.</p>
+  </details>
+  <details>
+    <summary>Gizli mod nedir?</summary>
+    <p><em>Ayarlar → Gizli mod</em>, ilaç ve sağlıkla ilgili sözcükleri Kilitli Ekran’dan, bildirimlerden ve araç takımlarından uzak tutar. Bir hatırlatıcıda yalnızca “Hatırlatıcı” yazar.</p>
+  </details>
+
+  <h2>Verileriniz</h2>
+  <details>
+    <summary>Verilerim nerede saklanıyor?</summary>
+    <p>Yalnızca iPhone’unuzda. Hesap ya da sunucu yoktur ve uygulama iCloud üzerinden eşitleme yapmaz. Ayrıntılar <a href="privacy#tr">gizlilik politikasında</a>.</p>
+  </details>
+  <details>
+    <summary>Yeni bir iPhone’a nasıl geçerim?</summary>
+    <p>Geçmeden önce <em>Ayarlar → Verileriniz → Yedek dosyası kaydet</em>’i açın ve dosyayı yeni iPhone’dan ulaşabileceğiniz bir yerde, örneğin Dosyalar’da ya da kendinize gönderdiğiniz bir e-postada saklayın. Yeni iPhone’da uygulamayı yükleyip kurulumu bitirin, sonra <em>Ayarlar → Verileriniz → Yedek içe aktar</em>’ı seçin: oradakileri dosyadaki her şeyle değiştirir. iCloud Yedekleme ya da bir bilgisayarla alınan cihaz yedeği de uygulamanın verilerini içerir. Aylık yedek hatırlatıcısı, yakın tarihli bir dosyanız olmasına yardımcı olur.</p>
+  </details>
+  <details>
+    <summary>Kayıtlarımı dışa aktarabilir miyim?</summary>
+    <p><em>Ayarlar → Verileriniz → CSV olarak dışa aktar</em>, dozlarınızın, doz değişikliklerinizin, durum kayıtlarınızın, kilolarınızın ve kutularınızın bir tablosunu oluşturur. İçe aktarmak için tam kopya, yedek dosyasıdır.</p>
+  </details>
+  <details>
+    <summary>Apple Sağlık uygulamayla nasıl çalışır?</summary>
+    <p>Kilonuzu Sağlık’tan okumak ve eklediğiniz kiloları oraya kaydetmek için <em>Ayarlar → Kilo → Apple Sağlık</em>’ı açın. Uygulama yalnızca kiloyu kullanır. Neyi okuyup yazabileceğini değiştirmek için Sağlık uygulamasında profilinizin altındaki uygulamalara bakın.</p>
+  </details>
+  <details>
+    <summary>Her şeyi nasıl silerim?</summary>
+    <p><em>Ayarlar → Verileriniz → Tüm verileri sil</em>, bu iPhone’daki tüm kayıtları ve ayarları kaldırır ve uygulama kurulumdan yeniden başlar. Apple Sağlık’a önceden kaydedilen kilolar, siz Sağlık uygulamasından silene kadar orada kalır.</p>
+  </details>
+
+  <h2>Premium</h2>
+  <details>
+    <summary>Neler ücretsiz, Premium’la neler gelir?</summary>
+    <p>Ücretsiz olan ve ücretsiz kalacak olanlar: kurulum, programlar, Geri al ile kayıt, bölgeler ve sıranız, yan etkiler ve durum kayıtları, Apple Sağlık ile kilo, hatırlatıcılar, Face ID kilidi, gizli mod, dışa ve içe aktarma. Premium; Kaydet düğmeli araç takımlarını, tablet zamanlayıcısını, örüntüleri, doktor raporunu, birden fazla ilacı ve stok takibini ekler.</p>
+  </details>
+  <details>
+    <summary>Ücretsiz hafta nasıl işler?</summary>
+    <p>Yıllık plan, yeni aboneler için ücretsiz bir haftayla başlar. Uygulama, bitmesine iki gün kala size hatırlatır ve o zamana kadar istediğiniz an iptal edebilirsiniz; <em>Ayarlar → Premium → Yönet</em> sizi aboneliğinize götürür.</p>
+  </details>
+  <details>
+    <summary>Nasıl iptal ederim?</summary>
+    <p>Uygulamada <em>Ayarlar → Premium → Yönet</em>; ya da iPhone’unuzda <em>Ayarlar → adınız → Abonelikler</em>. Premium, ödediğiniz dönemin sonuna kadar sürer.</p>
+  </details>
+  <details>
+    <summary>iPhone’umu değiştirdim ya da uygulamayı yeniden yükledim.</summary>
+    <p>Premium, Apple Hesabınıza bağlıdır. Görünmüyorsa <em>Ayarlar → Premium’a göz at</em>’ı açıp <em>Satın alımı geri yükle</em>’ye dokunun.</p>
+  </details>
+  <details>
+    <summary>Aboneliğim biterse ne olur?</summary>
+    <p>Kayıtlarınız kalır ve ücretsiz olan her şey çalışmaya devam eder. Araç takımları, tablet zamanlayıcısı, örüntüler, rapor ve stok takibi yeniden kilitlenir; birden fazla ilacınız varsa sıranızdaki ilk ilaç açık kalır.</p>
+  </details>
+
+  <h2>Araç takımları ve tablet zamanlayıcısı</h2>
+  <details>
+    <summary>Araç takımını nasıl eklerim?</summary>
+    <p>Ana Ekran’da: boş bir yere dokunup basılı tutun, <em>Düzenle → Araç Takımı Ekle</em>’ye dokunun, sonra Gradino uygulamasını ve bir boyut seçin. Kilitli Ekran’da: ekrana dokunup basılı tutun, <em>Özelleştir → Kilitli Ekran</em>’a dokunun, saatin altındaki alana dokunun ve Gradino uygulamasını seçin. Araç takımı sonraki dozunuzu gösterir ve Kaydet düğmesi onu kaydeder. Araç takımları Premium’la gelir.</p>
+  </details>
+  <details>
+    <summary>Tablet zamanlayıcısı nedir?</summary>
+    <p>Prospektüsünde yemekten önce beklemeniz söylenen bir tablet için Bugün ekranı, her planda bekleme süresini gösterir. Premium ile Bugün ekranı, tableti kaydettikten sonra süreyi geri sayar ve bu sayaç Kilitli Ekran’da ve Dynamic Island’da da görünür. Yalnızca prospektüsünüzdeki bekleme süresini ölçer; doz hakkında hiçbir şey söylemez.</p>
+  </details>
+
+  <footer>Gradino uygulaması, Plainroot Studio · <a href="privacy#tr">Gizlilik politikası</a></footer>
+</section>
+</main>
+</body>
+</html>

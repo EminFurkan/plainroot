@@ -7,6 +7,10 @@ The public pages for Plainroot Studio's apps, served by Cloudflare at https://pl
 - `lexmio/privacy.html`: Lexmio privacy policy, at https://plainrootstudio.com/lexmio/privacy
 - `gradino/support.html`: Gradino support, at https://plainrootstudio.com/gradino/support
 - `gradino/privacy.html`: Gradino privacy policy, at https://plainrootstudio.com/gradino/privacy
+- `paperhop/support.html`: Paperhop support, at https://plainrootstudio.com/paperhop/support
+- `paperhop/privacy.html`: Paperhop privacy policy, at https://plainrootstudio.com/paperhop/privacy
+
+The Paperhop pages are written and kept here, not in the Paperhop project. The app links to them, with `#tr` for Turkish. When the app starts to send something new or uses a new AI service, update the privacy page in the same release, so it and the app's consent screen say the same thing.
 
 The Lexmio pages are generated from `Site/` in the Lexmio project, with the support address filled in and links without the `.html` ending. Edit them there and copy them here, so the app and these pages stay in step. The Gradino pages come from `Site/` in the Gradino project (the glp1-tracker repository) the same way. Gradino has no app page here yet.
 

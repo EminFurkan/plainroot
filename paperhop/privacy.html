@@ -59,7 +59,7 @@
   <p>Our server runs on Cloudflare. It passes the drawing and its description to fal (fal.ai), which runs the AI models Paperhop uses:</p>
   <ul>
     <li><strong>Google’s Gemini</strong> checks that it’s a hand-made drawing with no real person or photo in it, and writes the movement from the description. fal reaches it through OpenRouter, a routing service.</li>
-    <li><strong>OpenAI’s GPT Image</strong> makes the style pictures, and the picture that Made real, Plush toy and Clay videos start from.</li>
+    <li><strong>OpenAI’s GPT Image</strong> makes the keepsake styles, and the picture that Made real, Plush toy and Clay videos start from.</li>
     <li><strong>Kuaishou’s Kling</strong> makes the video.</li>
   </ul>
   <p>These services get only the drawing and text based on its description, sent from our server. They get nothing from your iPhone, and nothing that names you or your child.</p>
@@ -74,12 +74,12 @@
   </ul>
 
   <h2>What our server keeps for your plan</h2>
-  <p>To know which plan you have and how many videos and pictures are left, our server keeps:</p>
+  <p>To know which plan you have and how many videos and keepsake styles are left, our server keeps:</p>
   <ul>
     <li>an ID that Apple gives your Apple Account for Paperhop. It isn’t your name, your email or your Apple Account itself, and the devices on that Apple Account share it;</li>
     <li>for each iPhone, a key from Apple’s App Attest, which proves that requests come from the real Paperhop app, and its notification token if you allow notifications;</li>
     <li>your Paperhop purchases as Apple signs them: the product, its dates, the App Store country, whether it’s in the free week, and any refund;</li>
-    <li>a record of the videos and pictures your plan has given, used and given back.</li>
+    <li>a record of the videos and keepsake styles your plan has given, used and given back.</li>
   </ul>
   <p>Each request also carries the app’s version number. We keep these records while they’re needed for your plan and your videos.</p>
 
@@ -87,7 +87,7 @@
   <p>If you allow notifications, our server uses your iPhone’s notification token, through Apple, to tell you when a video is ready or couldn’t be made. The messages are generic, such as “Your drawing is alive”, and never include the drawing or its title.</p>
 
   <h2>Purchases</h2>
-  <p>Paperhop Plus and video packs are bought through Apple, under Apple’s terms and privacy policy. We never receive your payment details. The app sends our server Apple’s signed record of each purchase, so that you get the right number of videos and pictures.</p>
+  <p>Paperhop Plus and video packs are bought through Apple, under Apple’s terms and privacy policy. We never receive your payment details. The app sends our server Apple’s signed record of each purchase, so that you get the right number of videos and keepsake styles.</p>
 
   <h2>Logs</h2>
   <p>Our server’s database never stores IP addresses. Cloudflare, which runs our server, keeps request logs for up to 7 days: the time of each request, what it asked for and technical details of the connection, which can include the IP address. Our own log lines record only IDs, statuses, timings, models and costs, never a drawing, a description or a prompt.</p>
@@ -160,7 +160,7 @@
   <p>Sunucumuz Cloudflare üzerinde çalışır. Resmi ve açıklamasını, Paperhop’un kullandığı yapay zekâ modellerini çalıştıran fal’a (fal.ai) iletir:</p>
   <ul>
     <li><strong>Google’ın Gemini</strong> modeli, resmin elle yapıldığını ve içinde gerçek bir insan ya da fotoğraf olmadığını denetler ve hareketi açıklamadan yazar. fal ona bir yönlendirme hizmeti olan OpenRouter üzerinden ulaşır.</li>
-    <li><strong>OpenAI’ın GPT Image</strong> modeli stil görsellerini ve Gerçek gibi, Peluş oyuncak ve Kil videolarının başladığı görseli üretir.</li>
+    <li><strong>OpenAI’ın GPT Image</strong> modeli hatıra stillerini ve Gerçek gibi, Peluş oyuncak ve Kil videolarının başladığı görseli üretir.</li>
     <li><strong>Kuaishou’nun Kling</strong> modeli videoyu üretir.</li>
   </ul>
   <p>Bu hizmetler yalnızca resmi ve açıklamasına dayanan metni, sunucumuzdan alır. iPhone’unuzdan hiçbir şey ve sizi ya da çocuğunuzu adıyla tanıtan hiçbir bilgi almazlar.</p>
@@ -175,12 +175,12 @@
   </ul>
 
   <h2>Planınız için sunucumuzun tuttukları</h2>
-  <p>Hangi planda olduğunuzu ve kaç video ile görsel kaldığını bilmek için sunucumuz şunları tutar:</p>
+  <p>Hangi planda olduğunuzu ve kaç video ile hatıra stili kaldığını bilmek için sunucumuz şunları tutar:</p>
   <ul>
     <li>Apple’ın Paperhop için Apple Hesabınıza verdiği bir kimlik. Bu, adınız, e-postanız ya da Apple Hesabınızın kendisi değildir; o Apple Hesabı’ndaki cihazlar bu kimliği paylaşır;</li>
     <li>her iPhone için, isteklerin gerçek Paperhop uygulamasından geldiğini kanıtlayan, Apple’ın App Attest hizmetinden bir anahtar ve bildirimlere izin verdiyseniz o iPhone’un bildirim belirteci;</li>
     <li>Apple’ın imzaladığı hâliyle Paperhop satın alımlarınız: ürün, tarihleri, App Store ülkesi, ücretsiz haftada olup olmadığı ve varsa iadesi;</li>
-    <li>planınızın verdiği, kullanılan ve geri verilen videoların ve görsellerin kaydı.</li>
+    <li>planınızın verdiği, kullanılan ve geri verilen videoların ve hatıra stillerinin kaydı.</li>
   </ul>
   <p>Her istek uygulamanın sürüm numarasını da taşır. Bu kayıtları, planınız ve videolarınız için gerektiği sürece tutarız.</p>
 
@@ -188,7 +188,7 @@
   <p>Bildirimlere izin verirseniz sunucumuz, bir video hazır olduğunda ya da üretilemediğinde haber vermek için iPhone’unuzun bildirim belirtecini Apple üzerinden kullanır. Mesajlar genel ifadelerdir, örneğin “Resminiz canlandı”; içlerinde resim ya da başlığı hiçbir zaman yer almaz.</p>
 
   <h2>Satın alımlar</h2>
-  <p>Paperhop Plus ve video paketleri Apple üzerinden, Apple’ın koşulları ve gizlilik politikası kapsamında satın alınır. Ödeme bilgileriniz bize hiçbir zaman ulaşmaz. Doğru sayıda video ve görsel almanız için uygulama, her satın alımın Apple tarafından imzalanmış kaydını sunucumuza gönderir.</p>
+  <p>Paperhop Plus ve video paketleri Apple üzerinden, Apple’ın koşulları ve gizlilik politikası kapsamında satın alınır. Ödeme bilgileriniz bize hiçbir zaman ulaşmaz. Doğru sayıda video ve hatıra stili almanız için uygulama, her satın alımın Apple tarafından imzalanmış kaydını sunucumuza gönderir.</p>
 
   <h2>Günlük kayıtları</h2>
   <p>Sunucumuzun veritabanı IP adreslerini hiçbir zaman saklamaz. Sunucumuzu çalıştıran Cloudflare, istek günlüklerini en fazla 7 gün tutar: her isteğin zamanı, ne istediği ve IP adresini de içerebilen bağlantı ayrıntıları. Kendi günlük satırlarımız yalnızca kimlikleri, durumları, süreleri, modelleri ve maliyetleri kaydeder; hiçbir zaman bir resmi, açıklamayı ya da istemi kaydetmez.</p>

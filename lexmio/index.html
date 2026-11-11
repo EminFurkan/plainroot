@@ -71,10 +71,8 @@
   @media (min-width: 860px) { .hero { grid-template-columns:1.2fr .8fr; padding-block:56px 96px; } }
   .eyebrow { letter-spacing:.02em; font-size:.95rem; font-weight:700; color:var(--accent); margin:0 0 12px; }
   .lede { font-size:1.2rem; line-height:1.55; color:var(--meaning); max-width:32em; margin:0 0 28px; }
-  .store { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:var(--on-accent); padding:12px 20px; border-radius:999px; font-weight:600; font-size:clamp(.88rem, 3.6vw, 1rem); text-decoration:none; }
-  .store::before { content:""; flex:none; width:8px; height:8px; border-radius:50%; background:#F3D58A; }
-  .store::after { content:"→"; }
-  .store:hover { filter:brightness(1.08); }
+  .store { display:inline-block; line-height:0; border-radius:10px; }
+  .store img { display:block; height:56px; width:auto; }
   .facts { color:var(--secondary); font-size:.95rem; margin:16px 0 0; }
 
   .phone { margin:0; background:var(--bezel); border-radius:46px; padding:10px; box-shadow:0 34px 60px -28px var(--shadow); }
@@ -171,8 +169,8 @@
         <p class="eyebrow">Lexmio for iPhone</p>
         <h1>English words on your Lock Screen</h1>
         <p class="lede">Every time you check the time, there’s a useful word and its meaning. Open it for an example and how it sounds, and it comes back on day 3 and day 7 to check it stuck.</p>
-        <!-- Lexmio is live since 11 November 2026. Swap in Apple's official App Store badge once it is in /lexmio/img/, and the web campaign link (ct=web) once it exists. -->
-        <p><a class="store" href="https://apps.apple.com/app/id6822015059">Get Lexmio on the App Store</a></p>
+        <!-- Apple's official badge, unmodified (Apple Marketing Tools). Switch the link to the web campaign link (ct=web) once it exists. -->
+        <p><a class="store" href="https://apps.apple.com/app/id6822015059"><img src="/lexmio/img/app-store-badge-en.svg" width="168" height="56" alt="Download on the App Store"></a></p>
         <p class="facts">Free to download · iPhone with iOS 17 or later · In English and Turkish</p>
       </div>
       <figure class="phone"><img src="/lexmio/img/en-widgets.webp" width="600" height="1304" alt="An iPhone Home Screen with three Lexmio widgets: a 7-day streak, the word automatic, and the word euro with Know it and Again buttons."></figure>
@@ -312,8 +310,8 @@
         <p class="eyebrow">iPhone için Lexmio</p>
         <h1>Kilit Ekranında İngilizce kelimeler</h1>
         <p class="lede">Saate her baktığında işine yarayacak bir kelime ve anlamı orada. Açınca örneğini ve okunuşunu görürsün; kelime, aklında kaldı mı diye 3. ve 7. günde yeniden gelir.</p>
-        <!-- Lexmio 11 Kasım 2026'dan beri yayında. Apple'ın resmî App Store rozeti /lexmio/img/ içine gelince onunla, web kampanya bağlantısı (ct=web) hazır olunca onunla değiştir. -->
-        <p><a class="store" href="https://apps.apple.com/app/id6822015059">Lexmio’yu App Store’dan indir</a></p>
+        <!-- Apple'ın resmî rozeti, değiştirilmeden (Apple Marketing Tools). Web kampanya bağlantısı (ct=web) hazır olunca bağlantıyı onunla değiştir. -->
+        <p><a class="store" href="https://apps.apple.com/app/id6822015059"><img src="/lexmio/img/app-store-badge-tr.svg" width="212" height="56" alt="App Store'dan İndirin"></a></p>
         <p class="facts">Ücretsiz indir · iOS 17 ve sonrası yüklü iPhone · Türkçe ve İngilizce</p>
       </div>
       <figure class="phone"><img src="/lexmio/img/tr-widgets.webp" width="600" height="1304" alt="Üç Lexmio widget’ı olan bir iPhone Ana Ekranı: 7 günlük seri, automatic kelimesi ve Biliyorum ile Tekrar düğmeleriyle euro kelimesi."></figure>

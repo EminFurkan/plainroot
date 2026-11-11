@@ -71,8 +71,10 @@
   @media (min-width: 860px) { .hero { grid-template-columns:1.2fr .8fr; padding-block:56px 96px; } }
   .eyebrow { letter-spacing:.02em; font-size:.95rem; font-weight:700; color:var(--accent); margin:0 0 12px; }
   .lede { font-size:1.2rem; line-height:1.55; color:var(--meaning); max-width:32em; margin:0 0 28px; }
-  .soon { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:var(--on-accent); padding:12px 20px; border-radius:999px; font-weight:600; font-size:clamp(.88rem, 3.6vw, 1rem); }
-  .soon::before { content:""; flex:none; width:8px; height:8px; border-radius:50%; background:#F3D58A; }
+  .store { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:var(--on-accent); padding:12px 20px; border-radius:999px; font-weight:600; font-size:clamp(.88rem, 3.6vw, 1rem); text-decoration:none; }
+  .store::before { content:""; flex:none; width:8px; height:8px; border-radius:50%; background:#F3D58A; }
+  .store::after { content:"→"; }
+  .store:hover { filter:brightness(1.08); }
   .facts { color:var(--secondary); font-size:.95rem; margin:16px 0 0; }
 
   .phone { margin:0; background:var(--bezel); border-radius:46px; padding:10px; box-shadow:0 34px 60px -28px var(--shadow); }
@@ -169,8 +171,8 @@
         <p class="eyebrow">Lexmio for iPhone</p>
         <h1>English words on your Lock Screen</h1>
         <p class="lede">Every time you check the time, there’s a useful word and its meaning. Open it for an example and how it sounds, and it comes back on day 3 and day 7 to check it stuck.</p>
-        <!-- At release, replace this line with Apple's "Download on the App Store" badge linking to https://apps.apple.com/app/id6822015059 -->
-        <p class="soon">Coming to the App Store in late October</p>
+        <!-- Lexmio is live since 11 November 2026. Swap in Apple's official App Store badge once it is in /lexmio/img/, and the web campaign link (ct=web) once it exists. -->
+        <p><a class="store" href="https://apps.apple.com/app/id6822015059">Get Lexmio on the App Store</a></p>
         <p class="facts">Free to download · iPhone with iOS 17 or later · In English and Turkish</p>
       </div>
       <figure class="phone"><img src="/lexmio/img/en-widgets.webp" width="600" height="1304" alt="An iPhone Home Screen with three Lexmio widgets: a 7-day streak, the word automatic, and the word euro with Know it and Again buttons."></figure>
@@ -279,7 +281,8 @@
       <h2 id="en-press">For press</h2>
       <dl>
         <div><dt>Developer</dt><dd>Plainroot Studio, Ankara, Türkiye</dd></div>
-        <div><dt>Release</dt><dd>Late October 2026</dd></div>
+        <div><dt>Release</dt><dd>11 November 2026</dd></div>
+        <div><dt>App Store</dt><dd><a href="https://apps.apple.com/app/id6822015059">apps.apple.com/app/id6822015059</a></dd></div>
         <div><dt>Platform</dt><dd>iPhone, iOS 17 or later</dd></div>
         <div><dt>Price</dt><dd>Free, with Lexmio Plus subscriptions and a one-time lifetime purchase</dd></div>
         <div><dt>Languages</dt><dd>English, Turkish</dd></div>
@@ -309,8 +312,8 @@
         <p class="eyebrow">iPhone için Lexmio</p>
         <h1>Kilit Ekranında İngilizce kelimeler</h1>
         <p class="lede">Saate her baktığında işine yarayacak bir kelime ve anlamı orada. Açınca örneğini ve okunuşunu görürsün; kelime, aklında kaldı mı diye 3. ve 7. günde yeniden gelir.</p>
-        <!-- Çıkışta bu satırın yerine https://apps.apple.com/app/id6822015059 bağlantılı "App Store'dan İndirin" rozeti gelecek -->
-        <p class="soon">Ekim sonunda App Store’da</p>
+        <!-- Lexmio 11 Kasım 2026'dan beri yayında. Apple'ın resmî App Store rozeti /lexmio/img/ içine gelince onunla, web kampanya bağlantısı (ct=web) hazır olunca onunla değiştir. -->
+        <p><a class="store" href="https://apps.apple.com/app/id6822015059">Lexmio’yu App Store’dan indir</a></p>
         <p class="facts">Ücretsiz indir · iOS 17 ve sonrası yüklü iPhone · Türkçe ve İngilizce</p>
       </div>
       <figure class="phone"><img src="/lexmio/img/tr-widgets.webp" width="600" height="1304" alt="Üç Lexmio widget’ı olan bir iPhone Ana Ekranı: 7 günlük seri, automatic kelimesi ve Biliyorum ile Tekrar düğmeleriyle euro kelimesi."></figure>
@@ -419,7 +422,8 @@
       <h2 id="tr-press">Basın için</h2>
       <dl>
         <div><dt>Geliştirici</dt><dd>Plainroot Studio, Ankara</dd></div>
-        <div><dt>Çıkış</dt><dd>Ekim 2026 sonu</dd></div>
+        <div><dt>Çıkış</dt><dd>11 Kasım 2026</dd></div>
+        <div><dt>App Store</dt><dd><a href="https://apps.apple.com/app/id6822015059">apps.apple.com/app/id6822015059</a></dd></div>
         <div><dt>Platform</dt><dd>iPhone, iOS 17 ve sonrası</dd></div>
         <div><dt>Fiyat</dt><dd>Ücretsiz; Lexmio Plus abonelikleri ve tek seferlik ömür boyu erişim</dd></div>
         <div><dt>Diller</dt><dd>Türkçe, İngilizce</dd></div>

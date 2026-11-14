@@ -14,12 +14,12 @@
   body { margin:0; background:var(--canvas); color:var(--ink); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   main { max-width:680px; margin:0 auto; padding:40px 20px 64px; }
   h1, h2 { font-weight:650; line-height:1.2; letter-spacing:-0.01em; }
-  h1 { font-size:2.1rem; margin:0 0 8px; }
+  h1 { font-size:2.1rem; margin:0 0 8px; hyphens:auto; -webkit-hyphens:auto; overflow-wrap:break-word; }
   h2 { font-size:1.3rem; margin:36px 0 12px; }
   p, li { margin:0 0 10px; }
   a { color:var(--accent); }
   .meta { color:var(--secondary); }
-  .lang { display:flex; gap:12px; margin:16px 0 8px; }
+  .lang { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 8px; }
   .lang a { padding:6px 14px; border:1px solid var(--divider); border-radius:999px; text-decoration:none; }
   .contact { background:var(--surface); border:1px solid var(--divider); border-radius:16px; padding:16px 20px; margin:24px 0; }
   .contact p:last-child, details p:last-child { margin-bottom:0; }
@@ -35,7 +35,7 @@
 <section id="en" lang="en">
   <h1>Paperhop Support</h1>
   <p class="meta">Your children’s drawings on a fridge in your iPhone, and the favourites brought to life.</p>
-  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a></nav>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
   <div class="contact">
     <p><strong>Need help?</strong> Write to <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a>. Tell us your iPhone model, your iOS version and what happened; a screenshot helps. Please leave your children’s names and photos of them out of it.</p>
   </div>
@@ -142,7 +142,7 @@
 <section id="tr" lang="tr">
   <h1>Paperhop Destek</h1>
   <p class="meta">Çocuklarınızın resimleri iPhone’unuzdaki bir buzdolabında; en sevdikleri canlanıyor.</p>
-  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a></nav>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
   <div class="contact">
     <p><strong>Yardım mı lazım?</strong> <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a> adresine yazın. iPhone modelinizi, iOS sürümünüzü ve ne olduğunu anlatın; bir ekran görüntüsü işimizi kolaylaştırır. Lütfen çocuklarınızın adlarını ve fotoğraflarını eklemeyin.</p>
   </div>
@@ -242,6 +242,541 @@
   </details>
 
   <footer>Plainroot Studio’dan Paperhop · <a href="privacy#tr">Gizlilik politikası</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Kullanım koşulları</a></footer>
+</section>
+
+<hr>
+
+<section id="es" lang="es">
+  <h1>Ayuda de Paperhop</h1>
+  <p class="meta">Los dibujos de tus hijos en una nevera dentro de tu iPhone, y sus favoritos, cobrando vida.</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
+  <div class="contact">
+    <p><strong>¿Necesitas ayuda?</strong> Escribe a <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a>. Cuéntanos qué modelo de iPhone tienes, tu versión de iOS y qué ha pasado; una captura de pantalla ayuda. Por favor, no incluyas los nombres de tus hijos ni fotos de ellos.</p>
+  </div>
+
+  <h2>Dibujos</h2>
+  <details open>
+    <summary>¿Cómo añado un dibujo?</summary>
+    <p>Toca el botón de escanear del centro y sujeta el iPhone sobre el dibujo: la cámara encuentra el papel, lo recorta y lo endereza. También puedes usar <em>Elegir de Fotos</em>. Después, elige al niño, ponle un título al dibujo y toca <em>A la nevera</em>.</p>
+  </details>
+  <details>
+    <summary>¿Qué hace Cuéntame tu dibujo?</summary>
+    <p>Tu hijo puede hablar del dibujo durante 30 segundos como máximo. La grabación se pasa a texto en tu iPhone y se queda con el dibujo en el iCloud de tu familia; nunca se envía, ni a nosotros ni a los servicios de IA. Sus palabras se convierten en la descripción del dibujo, que puedes cambiar antes de darle vida.</p>
+  </details>
+  <details>
+    <summary>¿Puede ver la nevera toda la familia?</summary>
+    <p>Sí. Los dispositivos que usan la misma cuenta de Apple comparten la nevera a través de iCloud, y también el plan y sus vídeos. Activa iCloud para Paperhop en cada uno, en <em>Ajustes → tu nombre → iCloud → Ver todo</em>. Plus no se comparte con En familia: pertenece a la cuenta de Apple que lo compró.</p>
+  </details>
+
+  <h2>Dar vida a los dibujos</h2>
+  <details>
+    <summary>¿Cómo funciona Darle vida?</summary>
+    <p>En la página de un dibujo, toca <em>Darle vida</em>. En la pantalla Animar, revisa la descripción, que es lo que hará el dibujo, y elige un aspecto: Cobra vida, Como de verdad, Peluche o Plastilina. La primera vez, la app te pide permiso para enviar el dibujo a los servicios de IA que crean el vídeo; la <a href="privacy#es">política de privacidad</a> explica exactamente qué se envía. Un vídeo tarda uno o dos minutos, y puedes salir de la app: si permites las notificaciones, una te avisará cuando tu dibujo tenga vida.</p>
+  </details>
+  <details>
+    <summary>¿Por qué se rechazó un dibujo?</summary>
+    <p>Paperhop solo anima dibujos hechos a mano. Si encuentra una persona real o una foto en la imagen, el dibujo se queda en tu nevera pero no se anima, y no se gasta nada. Prueba a escanearlo con solo el dibujo en el encuadre.</p>
+  </details>
+  <details>
+    <summary>Un vídeo falló o nunca llegó.</summary>
+    <p>Si un vídeo falla o se rechaza, el vídeo que gastaste se te devuelve automáticamente. Si uno no está listo en 24 horas, aparece como caducado y también se te devuelve.</p>
+  </details>
+  <details>
+    <summary>Dice «Mucha demanda ahora mismo».</summary>
+    <p>Paperhop limita cuántos vídeos crea cada día. Vuelve a intentarlo más tarde; no se ha gastado nada.</p>
+  </details>
+  <details>
+    <summary>¿Qué son los estilos?</summary>
+    <p>Los estilos convierten un dibujo en una imagen con un aspecto: Como de verdad, Peluche, Plastilina o Cuento. Abre <em>Estilos</em>, elige un aspecto y luego un dibujo.</p>
+  </details>
+
+  <h2>Compartir y recuerdos</h2>
+  <details>
+    <summary>¿Cómo comparto un vídeo?</summary>
+    <p>Cuando un vídeo esté listo, toca <em>Compartir el vídeo revelación</em>: un vídeo corto que va del papel al dibujo con vida, con la grabación de tu hijo si la hay. O guarda el vídeo en Fotos.</p>
+  </details>
+  <details>
+    <summary>¿Qué es la marca «Hecho con Paperhop»?</summary>
+    <p>Una pequeña marca en los vídeos y las imágenes que compartes o guardas. También indica a quien los ve que se crearon con IA. Con Plus, puedes quitarla en <em>Ajustes → Vídeos</em>.</p>
+  </details>
+  <details>
+    <summary>¿Qué es el álbum del año?</summary>
+    <p>Un PDF listo para imprimir con el año de un niño: sus dibujos con sus palabras, página a página. Viene con Plus.</p>
+  </details>
+  <details>
+    <summary>¿Cómo añado el widget?</summary>
+    <p>En la pantalla de inicio: mantén pulsado un espacio vacío, toca <em>Editar → Añadir widget</em> y elige Paperhop. En la pantalla de bloqueo: mantenla pulsada, toca <em>Personalizar → Pantalla de bloqueo</em>, toca el cuadro debajo de la hora y elige Paperhop. El widget muestra tu dibujo más reciente, o tus favoritos por turnos; para añadir un dibujo a tus favoritos, toca <em>Widget</em> cuando su vídeo esté listo.</p>
+  </details>
+
+  <h2>Plus y paquetes de vídeos</h2>
+  <details>
+    <summary>¿Qué es gratis y qué incluye Plus?</summary>
+    <p>Gratis: el escaneo, la nevera, la cronología, las grabaciones, los widgets y la sincronización con iCloud. Plus da vida a los dibujos con 5 vídeos y 30 estilos de recuerdo al mes (3 y 15 en Turquía). También añade el PDF del álbum del año y la opción de quitar la marca.</p>
+  </details>
+  <details>
+    <summary>¿Cómo funciona la semana gratis?</summary>
+    <p>El plan anual empieza con una semana gratis para quienes se suscriben por primera vez, con 2 vídeos y 6 estilos de recuerdo. Cancela al menos un día antes de que termine y no se te cobrará nada.</p>
+  </details>
+  <details>
+    <summary>¿Qué es un paquete de vídeos?</summary>
+    <p>Cinco vídeos más para cuando se acaben los del mes. Nunca caducan y se usan después de tus vídeos mensuales.</p>
+  </details>
+  <details>
+    <summary>¿Cómo cancelo?</summary>
+    <p>En la app, <em>Ajustes → Plus → Gestionar suscripción</em>; o en tu iPhone, <em>Ajustes → tu nombre → Suscripciones</em>. Plus sigue activo hasta el final del periodo que has pagado.</p>
+  </details>
+  <details>
+    <summary>Cambié de iPhone o reinstalé la app.</summary>
+    <p>Plus va con tu cuenta de Apple. Si no aparece, abre <em>Ajustes → Plus → Restaurar compras</em>. Con iCloud activado, tus dibujos vuelven solos.</p>
+  </details>
+  <details>
+    <summary>Dice «Plus aún no está confirmado».</summary>
+    <p>La App Store indica que tienes Plus, pero nuestro servidor aún no lo ha confirmado. Comprueba tu conexión y vuelve a abrir la app. Si el mensaje no desaparece, escríbenos.</p>
+  </details>
+
+  <h2>Tus datos</h2>
+  <details>
+    <summary>¿Dónde se guardan los dibujos?</summary>
+    <p>En tu iPhone y, con iCloud activado, en el iCloud privado de tu familia, que nosotros no podemos ver. Un dibujo solo va a nuestro servidor y a los servicios de IA cuando le das vida o creas un estilo, y nuestro servidor lo elimina en un plazo de 24 horas. La <a href="privacy#es">política de privacidad</a> tiene los detalles.</p>
+  </details>
+  <details>
+    <summary>¿Cómo desactivo la IA?</summary>
+    <p><em>Ajustes → Permiso de IA → Retirar el permiso de IA.</em> El escaneo y la nevera siguen funcionando, y lo que ya se ha creado se queda.</p>
+  </details>
+  <details>
+    <summary>¿Cómo elimino un dibujo, o todo?</summary>
+    <p>En la página de un dibujo, toca <em>Eliminar dibujo</em>; para eliminar a un niño y sus dibujos, abre <em>Ajustes → Niños</em>. En ambos casos se elimina de iCloud y de los dispositivos de tu familia. Para quitarlo todo, elimina la app y luego abre <em>Ajustes → tu nombre → iCloud → Almacenamiento</em> en tu iPhone y elige Paperhop.</p>
+  </details>
+
+  <footer>Paperhop, de Plainroot Studio · <a href="privacy#es">Política de privacidad</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Condiciones de uso</a></footer>
+</section>
+
+<hr>
+
+<section id="es-419" lang="es-419">
+  <h1>Ayuda de Paperhop</h1>
+  <p class="meta">Los dibujos de tus hijos en un refri dentro de tu iPhone, y sus favoritos, cobrando vida.</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
+  <div class="contact">
+    <p><strong>¿Necesitas ayuda?</strong> Escribe a <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a>. Cuéntanos qué modelo de iPhone tienes, tu versión de iOS y qué pasó; una captura de pantalla ayuda. Por favor, no incluyas los nombres de tus hijos ni fotos de ellos.</p>
+  </div>
+
+  <h2>Dibujos</h2>
+  <details open>
+    <summary>¿Cómo agrego un dibujo?</summary>
+    <p>Toca el botón de escanear del centro y sostén el iPhone sobre el dibujo: la cámara encuentra el papel, lo recorta y lo endereza. También puedes usar <em>Elegir de Fotos</em>. Después, elige al niño, ponle un título al dibujo y toca <em>Pegar en el refri</em>.</p>
+  </details>
+  <details>
+    <summary>¿Qué hace Cuéntame tu dibujo?</summary>
+    <p>Tu hijo puede hablar del dibujo durante 30 segundos como máximo. La grabación se pasa a texto en tu iPhone y se queda con el dibujo en el iCloud de tu familia; nunca se envía, ni a nosotros ni a los servicios de IA. Sus palabras se convierten en la descripción del dibujo, que puedes cambiar antes de darle vida.</p>
+  </details>
+  <details>
+    <summary>¿Puede ver el refri toda la familia?</summary>
+    <p>Sí. Los dispositivos que usan la misma cuenta de Apple comparten el refri a través de iCloud, y también el plan y sus videos. Activa iCloud para Paperhop en cada uno, en <em>Configuración → tu nombre → iCloud → Ver todo</em>. Plus no se comparte con En familia: pertenece a la cuenta de Apple que lo compró.</p>
+  </details>
+
+  <h2>Dar vida a los dibujos</h2>
+  <details>
+    <summary>¿Cómo funciona Darle vida?</summary>
+    <p>En la página de un dibujo, toca <em>Darle vida</em>. En la pantalla Animar, revisa la descripción, que es lo que hará el dibujo, y elige un aspecto: Cobra vida, Como de verdad, Peluche o Plastilina. La primera vez, la app te pide permiso para enviar el dibujo a los servicios de IA que crean el video; la <a href="privacy#es-419">política de privacidad</a> explica exactamente qué se envía. Un video tarda uno o dos minutos, y puedes salir de la app: si permites las notificaciones, una te avisará cuando tu dibujo tenga vida.</p>
+  </details>
+  <details>
+    <summary>¿Por qué se rechazó un dibujo?</summary>
+    <p>Paperhop solo anima dibujos hechos a mano. Si encuentra una persona real o una foto en la imagen, el dibujo se queda en tu refri pero no se anima, y no se gasta nada. Intenta escanearlo con solo el dibujo en el encuadre.</p>
+  </details>
+  <details>
+    <summary>Un video falló o nunca llegó.</summary>
+    <p>Si un video falla o se rechaza, el video que gastaste se te devuelve automáticamente. Si uno no está listo en 24 horas, aparece como vencido y también se te devuelve.</p>
+  </details>
+  <details>
+    <summary>Dice «Mucha demanda ahora mismo».</summary>
+    <p>Paperhop limita cuántos videos crea cada día. Vuelve a intentarlo más tarde; no se gastó nada.</p>
+  </details>
+  <details>
+    <summary>¿Qué son los estilos?</summary>
+    <p>Los estilos convierten un dibujo en una imagen con un aspecto: Como de verdad, Peluche, Plastilina o Cuento. Abre <em>Estilos</em>, elige un aspecto y luego un dibujo.</p>
+  </details>
+
+  <h2>Compartir y recuerdos</h2>
+  <details>
+    <summary>¿Cómo comparto un video?</summary>
+    <p>Cuando un video esté listo, toca <em>Compartir el video revelación</em>: un video corto que va del papel al dibujo con vida, con la grabación de tu hijo si la hay. O guarda el video en Fotos.</p>
+  </details>
+  <details>
+    <summary>¿Qué es la marca «Hecho con Paperhop»?</summary>
+    <p>Una pequeña marca en los videos y las imágenes que compartes o guardas. También indica a quien los ve que se crearon con IA. Con Plus, puedes quitarla en <em>Configuración → Videos</em>.</p>
+  </details>
+  <details>
+    <summary>¿Qué es el álbum del año?</summary>
+    <p>Un PDF listo para imprimir con el año de un niño: sus dibujos con sus palabras, página a página. Viene con Plus.</p>
+  </details>
+  <details>
+    <summary>¿Cómo agrego el widget?</summary>
+    <p>En la pantalla de inicio: mantén presionado un espacio vacío, toca <em>Editar → Agregar widget</em> y elige Paperhop. En la pantalla bloqueada: mantenla presionada, toca <em>Personalizar → Pantalla bloqueada</em>, toca el recuadro debajo de la hora y elige Paperhop. El widget muestra tu dibujo más reciente, o tus favoritos por turnos; para agregar un dibujo a tus favoritos, toca <em>Widget</em> cuando su video esté listo.</p>
+  </details>
+
+  <h2>Plus y paquetes de videos</h2>
+  <details>
+    <summary>¿Qué es gratis y qué incluye Plus?</summary>
+    <p>Gratis: el escaneo, el refri, la cronología, las grabaciones, los widgets y la sincronización con iCloud. Plus da vida a los dibujos con 5 videos y 30 estilos de recuerdo al mes (3 y 15 en Turquía). También agrega el PDF del álbum del año y la opción de quitar la marca.</p>
+  </details>
+  <details>
+    <summary>¿Cómo funciona la semana gratis?</summary>
+    <p>El plan anual empieza con una semana gratis para quienes se suscriben por primera vez, con 2 videos y 6 estilos de recuerdo. Cancela al menos un día antes de que termine y no se te cobrará nada.</p>
+  </details>
+  <details>
+    <summary>¿Qué es un paquete de videos?</summary>
+    <p>Cinco videos más para cuando se acaben los del mes. Nunca vencen y se usan después de tus videos mensuales.</p>
+  </details>
+  <details>
+    <summary>¿Cómo cancelo?</summary>
+    <p>En la app, <em>Configuración → Plus → Administrar suscripción</em>; o en tu iPhone, <em>Configuración → tu nombre → Suscripciones</em>. Plus sigue activo hasta el final del período que pagaste.</p>
+  </details>
+  <details>
+    <summary>Cambié de iPhone o reinstalé la app.</summary>
+    <p>Plus va con tu cuenta de Apple. Si no aparece, abre <em>Configuración → Plus → Restaurar compras</em>. Con iCloud activado, tus dibujos vuelven solos.</p>
+  </details>
+  <details>
+    <summary>Dice «Plus aún no está confirmado».</summary>
+    <p>La App Store indica que tienes Plus, pero nuestro servidor aún no lo ha confirmado. Comprueba tu conexión y vuelve a abrir la app. Si el mensaje no desaparece, escríbenos.</p>
+  </details>
+
+  <h2>Tus datos</h2>
+  <details>
+    <summary>¿Dónde se guardan los dibujos?</summary>
+    <p>En tu iPhone y, con iCloud activado, en el iCloud privado de tu familia, que nosotros no podemos ver. Un dibujo solo va a nuestro servidor y a los servicios de IA cuando le das vida o creas un estilo, y nuestro servidor lo elimina en un plazo de 24 horas. La <a href="privacy#es-419">política de privacidad</a> tiene los detalles.</p>
+  </details>
+  <details>
+    <summary>¿Cómo desactivo la IA?</summary>
+    <p><em>Configuración → Permiso de IA → Retirar el permiso de IA.</em> El escaneo y el refri siguen funcionando, y lo que ya se creó se queda.</p>
+  </details>
+  <details>
+    <summary>¿Cómo elimino un dibujo, o todo?</summary>
+    <p>En la página de un dibujo, toca <em>Eliminar dibujo</em>; para eliminar a un niño y sus dibujos, abre <em>Configuración → Niños</em>. En ambos casos se elimina de iCloud y de los dispositivos de tu familia. Para quitarlo todo, elimina la app y luego abre <em>Configuración → tu nombre → iCloud → Almacenamiento</em> en tu iPhone y elige Paperhop.</p>
+  </details>
+
+  <footer>Paperhop, de Plainroot Studio · <a href="privacy#es-419">Política de privacidad</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Términos de uso</a></footer>
+</section>
+
+<hr>
+
+<section id="de" lang="de">
+  <h1>Paperhop-Support</h1>
+  <p class="meta">Die Zeichnungen deiner Kinder an einem Kühlschrank in deinem iPhone, und die Lieblingsbilder werden lebendig.</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
+  <div class="contact">
+    <p><strong>Brauchst du Hilfe?</strong> Schreib an <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a>. Nenne uns dein iPhone-Modell, deine iOS-Version und was passiert ist; ein Bildschirmfoto hilft. Bitte lass die Namen deiner Kinder und Fotos von ihnen weg.</p>
+  </div>
+
+  <h2>Zeichnungen</h2>
+  <details open>
+    <summary>Wie füge ich eine Zeichnung hinzu?</summary>
+    <p>Tippe auf die Scan-Taste in der Mitte und halte dein iPhone über die Zeichnung: Die Kamera erkennt das Papier, schneidet es zu und richtet es gerade aus. Du kannst auch <em>Aus Fotos auswählen</em>. Wähle dann das Kind, gib der Zeichnung einen Titel und tippe auf <em>Aufhängen</em>.</p>
+  </details>
+  <details>
+    <summary>Was macht „Erzähl mir davon“?</summary>
+    <p>Dein Kind kann bis zu 30 Sekunden über die Zeichnung erzählen. Die Aufnahme wird auf deinem iPhone in Text umgewandelt und bleibt mit der Zeichnung in der iCloud deiner Familie; sie geht nie an uns oder an KI-Dienste. Die Worte werden zur Beschreibung der Zeichnung, die du ändern kannst, bevor du sie zum Leben erweckst.</p>
+  </details>
+  <details>
+    <summary>Kann die ganze Familie den Kühlschrank sehen?</summary>
+    <p>Ja. Geräte, die mit demselben Apple Account angemeldet sind, teilen den Kühlschrank über iCloud und auch das Abo mit seinen Videos. Aktiviere auf jedem Gerät iCloud für Paperhop unter <em>Einstellungen → dein Name → iCloud → Alle anzeigen</em>. Plus wird nicht über die Familienfreigabe geteilt: Es gehört zu dem Apple Account, mit dem es gekauft wurde.</p>
+  </details>
+
+  <h2>Zeichnungen zum Leben erwecken</h2>
+  <details>
+    <summary>Wie funktioniert „Zum Leben erwecken“?</summary>
+    <p>Tippe auf der Seite einer Zeichnung auf <em>Zum Leben erwecken</em>. Prüfe auf dem Bildschirm „Animieren“ die Beschreibung, also das, was die Zeichnung tun wird, und wähle einen Look: Wird lebendig, Wie echt, Kuscheltier oder Knete. Beim ersten Mal bittet die App um deine Einwilligung, die Zeichnung an die KI-Dienste zu senden, die das Video erstellen; die <a href="privacy#de">Datenschutzerklärung</a> sagt genau, was gesendet wird. Ein Video dauert ein bis zwei Minuten, und du kannst die App verlassen: Wenn du Mitteilungen erlaubst, sagt dir eine Bescheid, sobald deine Zeichnung lebendig ist.</p>
+  </details>
+  <details>
+    <summary>Warum wurde eine Zeichnung abgelehnt?</summary>
+    <p>Paperhop animiert nur von Hand gemachte Zeichnungen. Findet es eine echte Person oder ein Foto im Bild, bleibt die Zeichnung an deinem Kühlschrank, wird aber nicht animiert, und nichts wird verbraucht. Versuch einen Scan, auf dem nur die Zeichnung zu sehen ist.</p>
+  </details>
+  <details>
+    <summary>Ein Video ist fehlgeschlagen oder nie angekommen.</summary>
+    <p>Wenn ein Video fehlschlägt oder abgelehnt wird, bekommst du das verbrauchte Video automatisch zurück. Ein Video, das nach 24 Stunden nicht fertig ist, wird als abgelaufen angezeigt, und auch dieses bekommst du zurück.</p>
+  </details>
+  <details>
+    <summary>Die App zeigt „Gerade viel los“.</summary>
+    <p>Paperhop begrenzt, wie viele Videos es pro Tag erstellt. Versuch es später noch einmal; es wurde nichts verbraucht.</p>
+  </details>
+  <details>
+    <summary>Was sind Stile?</summary>
+    <p>Stile verwandeln eine Zeichnung in ein Erinnerungsbild in einem Look: Wie echt, Kuscheltier, Knete oder Bilderbuch. Öffne <em>Stile</em>, wähle einen Look und dann eine Zeichnung.</p>
+  </details>
+
+  <h2>Teilen und Erinnerungen</h2>
+  <details>
+    <summary>Wie teile ich ein Video?</summary>
+    <p>Wenn ein Video fertig ist, tippe auf <em>Verwandlungsvideo teilen</em>: ein kurzes Video, das vom Papier zur lebendigen Zeichnung führt, mit der Aufnahme deines Kindes, falls es eine gibt. Oder sichere das Video in „Fotos“.</p>
+  </details>
+  <details>
+    <summary>Was ist das Wasserzeichen „Erstellt mit Paperhop“?</summary>
+    <p>Ein kleines Zeichen auf den Videos und Bildern, die du teilst oder sicherst. Es zeigt Betrachtern auch, dass sie mit KI erstellt wurden. Mit Plus kannst du es unter <em>Einstellungen → Videos</em> ausschalten.</p>
+  </details>
+  <details>
+    <summary>Was ist das Jahresalbum?</summary>
+    <p>Ein druckfertiges PDF vom Jahr eines Kindes: seine Zeichnungen mit seinen Worten, Seite für Seite. Es gehört zu Plus.</p>
+  </details>
+  <details>
+    <summary>Wie füge ich das Widget hinzu?</summary>
+    <p>Auf dem Home-Bildschirm: Halte den Finger auf eine freie Stelle, tippe auf <em>Bearbeiten → Widget hinzufügen</em> und wähle Paperhop. Auf dem Sperrbildschirm: Halte den Finger darauf, tippe auf <em>Anpassen → Sperrbildschirm</em>, tippe auf den Bereich unter der Uhrzeit und wähle Paperhop. Das Widget zeigt deine neueste Zeichnung oder abwechselnd deine Favoriten; um eine Zeichnung zu ihnen hinzuzufügen, tippe auf <em>Widget</em>, wenn ihr Video fertig ist.</p>
+  </details>
+
+  <h2>Plus und Videopakete</h2>
+  <details>
+    <summary>Was ist gratis, und was bietet Plus?</summary>
+    <p>Gratis: Scannen, der Kühlschrank, die Zeitleiste, Aufnahmen, Widgets und die iCloud-Synchronisierung. Plus erweckt Zeichnungen zum Leben, mit 5 Videos und 30 Erinnerungsbildern im Monat (in der Türkei 3 und 15). Dazu kommen das Jahresalbum als PDF und der Schalter für das Wasserzeichen.</p>
+  </details>
+  <details>
+    <summary>Wie funktioniert die Gratiswoche?</summary>
+    <p>Wer das Jahresabo zum ersten Mal abschließt, bekommt zuerst eine Gratiswoche mit 2 Videos und 6 Erinnerungsbildern. Kündige spätestens einen Tag vor ihrem Ende, dann wird dir nichts berechnet.</p>
+  </details>
+  <details>
+    <summary>Was ist ein Videopaket?</summary>
+    <p>Fünf weitere Videos für den Fall, dass die des Monats aufgebraucht sind. Sie verfallen nie und werden nach deinen monatlichen Videos genutzt.</p>
+  </details>
+  <details>
+    <summary>Wie kündige ich?</summary>
+    <p>In der App unter <em>Einstellungen → Plus → Abo verwalten</em> oder auf deinem iPhone unter <em>Einstellungen → dein Name → Abonnements</em>. Plus bleibt bis zum Ende des bezahlten Zeitraums aktiv.</p>
+  </details>
+  <details>
+    <summary>Ich habe ein neues iPhone oder die App neu installiert.</summary>
+    <p>Plus ist an deinen Apple Account gebunden. Wird es nicht angezeigt, öffne <em>Einstellungen → Plus → Käufe wiederherstellen</em>. Ist iCloud aktiviert, kommen deine Zeichnungen von selbst zurück.</p>
+  </details>
+  <details>
+    <summary>Die App zeigt „Plus ist noch nicht bestätigt“.</summary>
+    <p>Laut App Store hast du Plus, aber unser Server hat es noch nicht bestätigt. Prüfe deine Verbindung und öffne die App erneut. Bleibt die Meldung, schreib uns.</p>
+  </details>
+
+  <h2>Deine Daten</h2>
+  <details>
+    <summary>Wo werden die Zeichnungen gespeichert?</summary>
+    <p>Auf deinem iPhone und, wenn iCloud aktiviert ist, in der privaten iCloud deiner Familie, die wir nicht sehen können. Eine Zeichnung geht nur an unseren Server und die KI-Dienste, wenn du sie zum Leben erweckst oder ein Erinnerungsbild erstellst, und unser Server löscht sie innerhalb von 24 Stunden. Die Einzelheiten stehen in der <a href="privacy#de">Datenschutzerklärung</a>.</p>
+  </details>
+  <details>
+    <summary>Wie schalte ich die KI aus?</summary>
+    <p><em>Einstellungen → KI-Einwilligung → KI-Einwilligung widerrufen.</em> Scannen und der Kühlschrank funktionieren weiter, und was schon erstellt wurde, bleibt.</p>
+  </details>
+  <details>
+    <summary>Wie lösche ich eine Zeichnung oder alles?</summary>
+    <p>Tippe auf der Seite einer Zeichnung auf <em>Zeichnung löschen</em>; um ein Kind mit seinen Zeichnungen zu löschen, öffne <em>Einstellungen → Kinder</em>. In beiden Fällen wird es aus iCloud und von den Geräten deiner Familie entfernt. Um alles zu entfernen, lösche die App, öffne dann auf deinem iPhone <em>Einstellungen → dein Name → iCloud → Speicher</em> und wähle Paperhop.</p>
+  </details>
+
+  <footer>Paperhop von Plainroot Studio · <a href="privacy#de">Datenschutzerklärung</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Nutzungsbedingungen</a></footer>
+</section>
+
+<hr>
+
+<section id="fr" lang="fr">
+  <h1>Assistance Paperhop</h1>
+  <p class="meta">Les dessins de vos enfants sur un frigo dans votre iPhone, et leurs préférés qui prennent vie.</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
+  <div class="contact">
+    <p><strong>Besoin d’aide ?</strong> Écrivez à <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a>. Indiquez-nous votre modèle d’iPhone, votre version d’iOS et ce qui s’est passé ; une capture d’écran aide. Merci de ne pas y mettre les prénoms de vos enfants ni de photos d’eux.</p>
+  </div>
+
+  <h2>Dessins</h2>
+  <details open>
+    <summary>Comment ajouter un dessin ?</summary>
+    <p>Touchez le bouton Scanner au centre et tenez votre iPhone au-dessus du dessin : l’appareil photo repère la feuille, la recadre et la redresse. Vous pouvez aussi utiliser <em>Choisir dans Photos</em>. Choisissez ensuite l’enfant, donnez un titre au dessin et touchez <em>Sur le frigo</em>.</p>
+  </details>
+  <details>
+    <summary>À quoi sert Raconte-moi ?</summary>
+    <p>Votre enfant peut parler de son dessin pendant 30 secondes au maximum. L’enregistrement est transcrit sur votre iPhone et reste avec le dessin dans l’iCloud de votre famille ; il n’est jamais envoyé, ni à nous ni aux services d’IA. Ses mots deviennent la description du dessin, que vous pouvez modifier avant de lui donner vie.</p>
+  </details>
+  <details>
+    <summary>Toute la famille peut-elle voir le frigo ?</summary>
+    <p>Oui. Les appareils connectés au même compte Apple partagent le frigo via iCloud, ainsi que l’abonnement et ses vidéos. Activez iCloud pour Paperhop sur chacun, dans <em>Réglages → votre nom → iCloud → Tout afficher</em>. Plus n’est pas partagé via le Partage familial : il appartient au compte Apple qui l’a acheté.</p>
+  </details>
+
+  <h2>Donner vie aux dessins</h2>
+  <details>
+    <summary>Comment fonctionne Donner vie ?</summary>
+    <p>Sur la page d’un dessin, touchez <em>Donner vie</em>. Sur l’écran Animer, vérifiez la description, c’est-à-dire ce que fera le dessin, et choisissez un style : Prend vie, Comme en vrai, Peluche ou Pâte à modeler. La première fois, l’app vous demande votre consentement pour envoyer le dessin aux services d’IA qui créent la vidéo ; la <a href="privacy#fr">politique de confidentialité</a> indique exactement ce qui est envoyé. Une vidéo prend une ou deux minutes, et vous pouvez quitter l’app : si vous autorisez les notifications, l’une d’elles vous prévient quand votre dessin a pris vie.</p>
+  </details>
+  <details>
+    <summary>Pourquoi un dessin a-t-il été refusé ?</summary>
+    <p>Paperhop n’anime que des dessins faits à la main. S’il trouve une personne réelle ou une photo dans l’image, le dessin reste sur votre frigo mais n’est pas animé, et rien n’est décompté. Essayez de scanner avec seulement le dessin dans le cadre.</p>
+  </details>
+  <details>
+    <summary>Une vidéo a échoué ou n’est jamais arrivée.</summary>
+    <p>Si une vidéo échoue ou est refusée, la vidéo utilisée vous est rendue automatiquement. Une vidéo qui n’est pas prête sous 24 heures apparaît comme expirée, et vous est rendue elle aussi.</p>
+  </details>
+  <details>
+    <summary>Le message « Beaucoup de monde en ce moment » s’affiche.</summary>
+    <p>Paperhop limite le nombre de vidéos qu’il crée chaque jour. Réessayez plus tard ; rien n’a été décompté.</p>
+  </details>
+  <details>
+    <summary>Que sont les styles ?</summary>
+    <p>Les styles transforment un dessin en image souvenir, dans le style de votre choix : Comme en vrai, Peluche, Pâte à modeler ou Livre de contes. Ouvrez <em>Styles</em>, choisissez un style, puis un dessin.</p>
+  </details>
+
+  <h2>Partage et souvenirs</h2>
+  <details>
+    <summary>Comment partager une vidéo ?</summary>
+    <p>Quand une vidéo est prête, touchez <em>Partager la vidéo révélation</em> : une courte vidéo qui passe de la feuille au dessin qui prend vie, avec l’enregistrement de votre enfant s’il y en a un. Ou enregistrez la vidéo dans Photos.</p>
+  </details>
+  <details>
+    <summary>Qu’est-ce que le filigrane « Créé avec Paperhop » ?</summary>
+    <p>Un petit filigrane sur les vidéos et les images que vous partagez ou enregistrez. Il indique aussi qu’elles ont été créées avec l’IA. Avec Plus, vous pouvez le retirer dans <em>Réglages → Vidéos</em>.</p>
+  </details>
+  <details>
+    <summary>Qu’est-ce que l’album de l’année ?</summary>
+    <p>Un PDF prêt à imprimer qui raconte l’année d’un enfant : ses dessins avec ses mots, page après page. Il est inclus dans Plus.</p>
+  </details>
+  <details>
+    <summary>Comment ajouter le widget ?</summary>
+    <p>Sur l’écran d’accueil : maintenez le doigt sur une zone vide, touchez <em>Modifier → Ajouter un widget</em>, puis choisissez Paperhop. Sur l’écran verrouillé : maintenez le doigt dessus, touchez <em>Personnaliser → Écran verrouillé</em>, touchez le champ sous l’heure, puis choisissez Paperhop. Le widget affiche votre dessin le plus récent, ou vos favoris à tour de rôle ; pour ajouter un dessin à vos favoris, touchez <em>Widget</em> quand sa vidéo est prête.</p>
+  </details>
+
+  <h2>Plus et packs de vidéos</h2>
+  <details>
+    <summary>Qu’est-ce qui est gratuit, et qu’apporte Plus ?</summary>
+    <p>Gratuit : le scan, le frigo, la chronologie, les enregistrements, les widgets et la synchronisation iCloud. Plus donne vie aux dessins avec 5 vidéos et 30 styles souvenirs par mois (3 et 15 en Turquie). Il ajoute aussi le PDF de l’album de l’année et l’option pour retirer le filigrane.</p>
+  </details>
+  <details>
+    <summary>Comment fonctionne la semaine offerte ?</summary>
+    <p>L’abonnement annuel commence par une semaine offerte pour les nouveaux abonnés, avec 2 vidéos et 6 styles souvenirs. Résiliez au moins un jour avant la fin et vous ne serez pas débité.</p>
+  </details>
+  <details>
+    <summary>Qu’est-ce qu’un pack de vidéos ?</summary>
+    <p>Cinq vidéos de plus pour quand celles du mois sont épuisées. Elles n’expirent jamais et sont utilisées après vos vidéos mensuelles.</p>
+  </details>
+  <details>
+    <summary>Comment résilier ?</summary>
+    <p>Dans l’app, <em>Réglages → Plus → Gérer l’abonnement</em> ; ou sur votre iPhone, <em>Réglages → votre nom → Abonnements</em>. Plus reste actif jusqu’à la fin de la période payée.</p>
+  </details>
+  <details>
+    <summary>J’ai changé d’iPhone ou réinstallé l’app.</summary>
+    <p>Plus suit votre compte Apple. S’il n’apparaît pas, ouvrez <em>Réglages → Plus → Restaurer les achats</em>. Si iCloud est activé, vos dessins reviennent d’eux-mêmes.</p>
+  </details>
+  <details>
+    <summary>Le message « Plus n’est pas encore confirmé » s’affiche.</summary>
+    <p>L’App Store indique que vous avez Plus, mais notre serveur ne l’a pas encore confirmé. Vérifiez votre connexion et rouvrez l’app. Si le message reste affiché, écrivez-nous.</p>
+  </details>
+
+  <h2>Vos données</h2>
+  <details>
+    <summary>Où sont conservés les dessins ?</summary>
+    <p>Sur votre iPhone et, si iCloud est activé, dans l’iCloud privé de votre famille, auquel nous n’avons pas accès. Un dessin n’est envoyé à notre serveur et aux services d’IA que lorsque vous lui donnez vie ou créez un style, et notre serveur le supprime sous 24 heures. La <a href="privacy#fr">politique de confidentialité</a> donne tous les détails.</p>
+  </details>
+  <details>
+    <summary>Comment désactiver l’IA ?</summary>
+    <p><em>Réglages → Consentement IA → Retirer le consentement IA.</em> Le scan et le frigo continuent de fonctionner, et ce qui a déjà été créé est conservé.</p>
+  </details>
+  <details>
+    <summary>Comment supprimer un dessin, ou tout ?</summary>
+    <p>Sur la page d’un dessin, touchez <em>Supprimer le dessin</em> ; pour supprimer un enfant et ses dessins, ouvrez <em>Réglages → Enfants</em>. Dans les deux cas, ils sont supprimés d’iCloud et des appareils de votre famille. Pour tout supprimer, supprimez l’app, puis ouvrez <em>Réglages → votre nom → iCloud → Stockage</em> sur votre iPhone et choisissez Paperhop.</p>
+  </details>
+
+  <footer>Paperhop par Plainroot Studio · <a href="privacy#fr">Politique de confidentialité</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Conditions d’utilisation</a></footer>
+</section>
+
+<hr>
+
+<section id="it" lang="it">
+  <h1>Supporto Paperhop</h1>
+  <p class="meta">I disegni dei tuoi figli su un frigo dentro il tuo iPhone, e i loro preferiti che prendono vita.</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
+  <div class="contact">
+    <p><strong>Ti serve aiuto?</strong> Scrivi a <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a>. Indicaci il modello del tuo iPhone, la versione di iOS e cosa è successo; un’istantanea dello schermo aiuta. Per favore non includere i nomi dei tuoi figli né loro foto.</p>
+  </div>
+
+  <h2>Disegni</h2>
+  <details open>
+    <summary>Come aggiungo un disegno?</summary>
+    <p>Tocca il pulsante Scansiona al centro e tieni l’iPhone sopra il disegno: la fotocamera trova il foglio, lo ritaglia e lo raddrizza. Puoi anche usare <em>Scegli da Foto</em>. Poi scegli il bambino, dai un titolo al disegno e tocca <em>Metti sul frigo</em>.</p>
+  </details>
+  <details>
+    <summary>A cosa serve Raccontamelo?</summary>
+    <p>Tuo figlio può raccontare il disegno per un massimo di 30 secondi. La registrazione viene trascritta sul tuo iPhone e resta con il disegno nell’iCloud della tua famiglia; non arriva mai a noi né ai servizi di IA. Le sue parole diventano la descrizione del disegno, che puoi modificare prima di dargli vita.</p>
+  </details>
+  <details>
+    <summary>Tutta la famiglia può vedere il frigo?</summary>
+    <p>Sì. I dispositivi su cui è stato effettuato l’accesso con lo stesso Apple Account condividono il frigo tramite iCloud, e anche il piano e i suoi video. Attiva iCloud per Paperhop su ognuno, in <em>Impostazioni → il tuo nome → iCloud → Mostra tutto</em>. Plus non si condivide con In famiglia: appartiene all’Apple Account che l’ha acquistato.</p>
+  </details>
+
+  <h2>Dare vita ai disegni</h2>
+  <details>
+    <summary>Come funziona Dagli vita?</summary>
+    <p>Nella pagina di un disegno, tocca <em>Dagli vita</em>. Nella schermata Anima, controlla la descrizione, cioè cosa farà il disegno, e scegli un look: Prende vita, Sembra vero, Peluche o Plastilina. La prima volta, l’app ti chiede il consenso per inviare il disegno ai servizi di IA che creano il video; l’<a href="privacy#it">informativa sulla privacy</a> spiega esattamente cosa viene inviato. Un video richiede uno o due minuti e puoi uscire dall’app: se consenti le notifiche, una ti avvisa quando il tuo disegno ha preso vita.</p>
+  </details>
+  <details>
+    <summary>Perché un disegno è stato rifiutato?</summary>
+    <p>Paperhop anima solo disegni fatti a mano. Se trova una persona reale o una foto nell’immagine, il disegno resta sul tuo frigo ma non viene animato, e non viene usato nulla. Prova a scansionarlo con solo il disegno nell’inquadratura.</p>
+  </details>
+  <details>
+    <summary>Un video non è riuscito o non è mai arrivato.</summary>
+    <p>Se un video non riesce o viene rifiutato, il video che hai usato ti viene restituito automaticamente. Un video che non è pronto entro 24 ore risulta scaduto, e anche quello ti viene restituito.</p>
+  </details>
+  <details>
+    <summary>Compare «Troppe richieste ora».</summary>
+    <p>Paperhop limita quanti video crea ogni giorno. Riprova più tardi; non è stato usato nulla.</p>
+  </details>
+  <details>
+    <summary>Cosa sono gli stili?</summary>
+    <p>Gli stili trasformano un disegno in un’immagine con un look: Sembra vero, Peluche, Plastilina o Libro di fiabe. Apri <em>Stili</em>, scegli un look e poi un disegno.</p>
+  </details>
+
+  <h2>Condividere e conservare</h2>
+  <details>
+    <summary>Come condivido un video?</summary>
+    <p>Quando un video è pronto, tocca <em>Condividi il video sorpresa</em>: un breve video che passa dal foglio al disegno che prende vita, con la registrazione di tuo figlio se c’è. Oppure salva il video in Foto.</p>
+  </details>
+  <details>
+    <summary>Cos’è il marchio «Creato con Paperhop»?</summary>
+    <p>Un piccolo marchio sui video e sulle immagini che condividi o salvi. Indica anche a chi li guarda che sono stati creati con l’IA. Con Plus puoi disattivarlo in <em>Impostazioni → Video</em>.</p>
+  </details>
+  <details>
+    <summary>Cos’è l’album dell’anno?</summary>
+    <p>Un PDF pronto da stampare con l’anno di un bambino: i suoi disegni con le sue parole, pagina per pagina. È incluso in Plus.</p>
+  </details>
+  <details>
+    <summary>Come aggiungo il widget?</summary>
+    <p>Nella schermata Home: tocca e tieni premuto un punto vuoto, tocca <em>Modifica → Aggiungi widget</em>, poi scegli Paperhop. Nella schermata di blocco: tienila premuta, tocca <em>Personalizza → Schermata di blocco</em>, tocca l’area sotto l’ora, poi scegli Paperhop. Il widget mostra il tuo disegno più recente, o i tuoi preferiti a turno; per aggiungere un disegno ai preferiti, tocca <em>Widget</em> quando il suo video è pronto.</p>
+  </details>
+
+  <h2>Plus e pacchetti di video</h2>
+  <details>
+    <summary>Cosa è gratis e cosa include Plus?</summary>
+    <p>Gratis: la scansione, il frigo, Negli anni, le registrazioni, i widget e la sincronizzazione con iCloud. Plus dà vita ai disegni con 5 video e 30 stili ricordo al mese (3 e 15 in Turchia). Aggiunge anche il PDF dell’album dell’anno e l’opzione per togliere il marchio.</p>
+  </details>
+  <details>
+    <summary>Come funziona la settimana gratis?</summary>
+    <p>Il piano annuale inizia con una settimana gratis per chi si abbona per la prima volta, con 2 video e 6 stili ricordo. Annulla almeno un giorno prima che finisca e non ti verrà addebitato nulla.</p>
+  </details>
+  <details>
+    <summary>Cos’è un pacchetto di video?</summary>
+    <p>Cinque video in più per quando quelli del mese sono finiti. Non scadono mai e si usano dopo i tuoi video mensili.</p>
+  </details>
+  <details>
+    <summary>Come annullo l’abbonamento?</summary>
+    <p>Nell’app, <em>Impostazioni → Plus → Gestisci abbonamento</em>; oppure sul tuo iPhone, <em>Impostazioni → il tuo nome → Abbonamenti</em>. Plus resta attivo fino alla fine del periodo pagato.</p>
+  </details>
+  <details>
+    <summary>Ho cambiato iPhone o reinstallato l’app.</summary>
+    <p>Plus segue il tuo Apple Account. Se non compare, apri <em>Impostazioni → Plus → Ripristina acquisti</em>. Con iCloud attivo, i tuoi disegni tornano da soli.</p>
+  </details>
+  <details>
+    <summary>Compare «Plus non è ancora confermato».</summary>
+    <p>L’App Store indica che hai Plus, ma il nostro server non l’ha ancora confermato. Controlla la connessione e riapri l’app. Se il messaggio resta, scrivici.</p>
+  </details>
+
+  <h2>I tuoi dati</h2>
+  <details>
+    <summary>Dove sono conservati i disegni?</summary>
+    <p>Sul tuo iPhone e, con iCloud attivo, nell’iCloud privato della tua famiglia, che noi non possiamo vedere. Un disegno va al nostro server e ai servizi di IA solo quando gli dai vita o crei uno stile, e il nostro server lo elimina entro 24 ore. L’<a href="privacy#it">informativa sulla privacy</a> ha tutti i dettagli.</p>
+  </details>
+  <details>
+    <summary>Come disattivo l’IA?</summary>
+    <p><em>Impostazioni → Consenso IA → Revoca il consenso IA.</em> La scansione e il frigo continuano a funzionare, e ciò che è già stato creato resta.</p>
+  </details>
+  <details>
+    <summary>Come elimino un disegno, o tutto?</summary>
+    <p>Nella pagina di un disegno, tocca <em>Elimina disegno</em>; per eliminare un bambino e i suoi disegni, apri <em>Impostazioni → Bambini</em>. In entrambi i casi viene rimosso da iCloud e dai dispositivi della tua famiglia. Per rimuovere tutto, elimina l’app, poi apri <em>Impostazioni → il tuo nome → iCloud → Archiviazione</em> sul tuo iPhone e scegli Paperhop.</p>
+  </details>
+
+  <footer>Paperhop di Plainroot Studio · <a href="privacy#it">Informativa sulla privacy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Condizioni d’uso</a></footer>
 </section>
 </main>
 </body>

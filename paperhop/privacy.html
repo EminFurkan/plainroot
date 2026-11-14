@@ -14,12 +14,12 @@
   body { margin:0; background:var(--canvas); color:var(--ink); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   main { max-width:680px; margin:0 auto; padding:40px 20px 64px; }
   h1, h2 { font-weight:650; line-height:1.2; letter-spacing:-0.01em; }
-  h1 { font-size:2.1rem; margin:0 0 8px; }
+  h1 { font-size:2.1rem; margin:0 0 8px; hyphens:auto; -webkit-hyphens:auto; overflow-wrap:break-word; }
   h2 { font-size:1.3rem; margin:36px 0 8px; }
   p, li { margin:0 0 12px; }
   a { color:var(--accent); }
   .meta { color:var(--secondary); font-size:.95rem; }
-  .lang { display:flex; gap:12px; margin:16px 0 8px; }
+  .lang { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 8px; }
   .lang a { padding:6px 14px; border:1px solid var(--divider); border-radius:999px; text-decoration:none; }
   .summary { background:var(--surface); border:1px solid var(--divider); border-radius:16px; padding:16px 20px; margin:24px 0; }
   .summary p { margin:0; }
@@ -32,7 +32,7 @@
 <section id="en" lang="en">
   <h1>Paperhop Privacy Policy</h1>
   <p class="meta">Last updated 4 November 2026</p>
-  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a></nav>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
 
   <div class="summary">
     <p><strong>In short:</strong> Paperhop is for parents. Your children’s drawings, names, ages and recordings stay on your devices and in your family’s iCloud. A drawing leaves your iPhone only when you bring it to life or make a style, and only after you agree on the consent screen. Then the drawing and its description go to our server and to the AI services that make the video or picture, and our server deletes them within 24 hours. There are no ads, no analytics and no tracking.</p>
@@ -133,7 +133,7 @@
 <section id="tr" lang="tr">
   <h1>Paperhop Gizlilik Politikası</h1>
   <p class="meta">Son güncelleme: 4 Kasım 2026</p>
-  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a></nav>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
 
   <div class="summary">
     <p><strong>Kısaca:</strong> Paperhop ebeveynler içindir. Çocuklarınızın resimleri, adları, yaşları ve ses kayıtları cihazlarınızda ve ailenizin iCloud’unda kalır. Bir resim iPhone’unuzdan yalnızca onu canlandırdığınızda ya da bir stil oluşturduğunuzda ve yalnızca izin ekranında onay verdikten sonra çıkar. O zaman resim ve açıklaması sunucumuza ve videoyu ya da görseli üreten yapay zekâ hizmetlerine gider; sunucumuz bunları 24 saat içinde siler. Reklam, analiz ya da takip yoktur.</p>
@@ -227,6 +227,511 @@
   <h2>İletişim</h2>
   <p>Gizlilikle ilgili sorular: <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a></p>
   <footer>Plainroot Studio’dan Paperhop · <a href="support#tr">Paperhop destek</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Kullanım koşulları</a></footer>
+</section>
+
+<hr>
+
+<section id="es" lang="es">
+  <h1>Política de privacidad de Paperhop</h1>
+  <p class="meta">Última actualización: 4 de noviembre de 2026</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
+
+  <div class="summary">
+    <p><strong>En resumen:</strong> Paperhop es para padres. Los dibujos de tus hijos, sus nombres, sus edades y sus grabaciones se quedan en tus dispositivos y en el iCloud de tu familia. Un dibujo solo sale de tu iPhone cuando le das vida o creas un estilo, y solo después de que lo aceptes en la pantalla de permiso. Entonces, el dibujo y su descripción van a nuestro servidor y a los servicios de IA que crean el vídeo o la imagen, y nuestro servidor los elimina en un plazo de 24 horas. No hay anuncios, ni analíticas, ni seguimiento.</p>
+  </div>
+
+  <h2>Quiénes somos</h2>
+  <p>Paperhop es una app de Plainroot Studio («nosotros»). Esta política se aplica a la app Paperhop para iPhone y a sus widgets.</p>
+
+  <h2>Lo que se queda con tu familia</h2>
+  <p>Tus dibujos y sus títulos, los nombres de tus hijos con su año y mes de nacimiento, las grabaciones y las palabras que se transcriben de ellas, tus favoritos, y los vídeos y las imágenes que has creado se guardan en tu iPhone. Si iCloud está activado para Paperhop, también se sincronizan a través del iCloud privado de tu familia con los dispositivos que usan la misma cuenta de Apple. Ese almacenamiento es de Apple y nosotros no podemos leerlo.</p>
+  <p>Las grabaciones se pasan a texto en tu iPhone. La grabación en sí nunca se envía, ni a nosotros ni a los servicios de IA.</p>
+  <p>Los widgets muestran una copia de los dibujos y favoritos recientes guardada en tu iPhone.</p>
+
+  <h2>Qué envía la app y cuándo</h2>
+  <p>Solo cuando tocas <em>Darle vida</em> o creas un estilo, y solo después de aceptar en la pantalla de permiso, la app envía a nuestro servidor:</p>
+  <ul>
+    <li>el dibujo, como imagen de 1280 píxeles como máximo en su lado más largo, sin metadatos de foto como la ubicación;</li>
+    <li>su descripción, tal como la dejaste en la pantalla Animar (hasta 300 caracteres), y el idioma en que está;</li>
+    <li>el aspecto que elegiste.</li>
+  </ul>
+  <p>Nunca envía el nombre, la edad, el cumpleaños ni la grabación de tu hijo. La descripción se envía tal como está escrita, así que es mejor no poner en ella nombres ni otros datos personales.</p>
+
+  <h2>Los servicios de IA</h2>
+  <p>Nuestro servidor funciona en Cloudflare. Pasa el dibujo y su descripción a fal (fal.ai), que ejecuta los modelos de IA que usa Paperhop:</p>
+  <ul>
+    <li><strong>Gemini, de Google,</strong> comprueba que es un dibujo hecho a mano, sin ninguna persona real ni foto, y escribe el movimiento a partir de la descripción. fal accede a él a través de OpenRouter, un servicio de enrutamiento.</li>
+    <li><strong>GPT Image, de OpenAI,</strong> crea los estilos de recuerdo y la imagen de la que parten los vídeos Como de verdad, Peluche y Plastilina.</li>
+    <li><strong>Kling, de Kuaishou,</strong> crea el vídeo.</li>
+  </ul>
+  <p>Estos servicios solo reciben el dibujo y un texto basado en su descripción, enviados desde nuestro servidor. No reciben nada de tu iPhone, ni nada con tu nombre o el de tu hijo.</p>
+
+  <h2>Cuánto tiempo se conserva</h2>
+  <ul>
+    <li><strong>Nuestro servidor</strong> elimina el dibujo, su descripción y lo que se crea a partir de él en un plazo de 24 horas, normalmente en cuanto tu iPhone ha descargado el resultado. Un registro de cada trabajo, sin imagen, descripción ni instrucciones para la IA, se elimina a los 30 días.</li>
+    <li><strong>fal</strong> no guarda un historial de nuestras solicitudes, y los archivos que crea caducan en menos de una hora. Nuestro servidor los elimina en cuanto tiene su propia copia.</li>
+    <li><strong>Google</strong> puede conservar las solicitudes durante un tiempo limitado para detectar abusos: hasta 55 días, o hasta 90 días si sus controles de seguridad marcan algo. No las usa para entrenar sus modelos.</li>
+    <li><strong>OpenAI</strong> puede conservar las solicitudes hasta 30 días para detectar abusos, y más tiempo solo cuando la ley lo exige o para evitar daños. No las usa para entrenar sus modelos.</li>
+    <li><strong>Kuaishou</strong>, a través de Kling AI Pte. Ltd., guarda los datos en sus servidores de Singapur y los conserva mientras los necesita para prestar su servicio. Su política de privacidad dice que no los usa para entrenar modelos.</li>
+  </ul>
+
+  <h2>Lo que guarda nuestro servidor para tu plan</h2>
+  <p>Para saber qué plan tienes y cuántos vídeos y estilos de recuerdo te quedan, nuestro servidor guarda:</p>
+  <ul>
+    <li>un identificador que Apple asigna a tu cuenta de Apple para Paperhop. No es tu nombre, ni tu correo, ni tu cuenta de Apple en sí, y lo comparten los dispositivos de esa cuenta de Apple;</li>
+    <li>para cada iPhone, una clave de App Attest de Apple, que demuestra que las solicitudes vienen de la app Paperhop auténtica, y su token de notificaciones si permites las notificaciones;</li>
+    <li>tus compras de Paperhop tal como Apple las firma: el producto, sus fechas, el país de la App Store, si está en la semana gratis y cualquier reembolso;</li>
+    <li>un registro de los vídeos y estilos de recuerdo que tu plan ha dado, usado y devuelto.</li>
+  </ul>
+  <p>Cada solicitud incluye también el número de versión de la app. Conservamos estos registros mientras hagan falta para tu plan y tus vídeos.</p>
+
+  <h2>Notificaciones</h2>
+  <p>Si permites las notificaciones, nuestro servidor usa el token de notificaciones de tu iPhone, a través de Apple, para avisarte cuando un vídeo está listo o no se ha podido crear. Los mensajes son genéricos, como «Tu dibujo ya tiene vida», y nunca incluyen el dibujo ni su título.</p>
+
+  <h2>Compras</h2>
+  <p>Paperhop Plus y los paquetes de vídeos se compran a través de Apple, con las condiciones y la política de privacidad de Apple. Nunca recibimos tus datos de pago. La app envía a nuestro servidor el registro firmado por Apple de cada compra, para que recibas el número correcto de vídeos y estilos de recuerdo.</p>
+
+  <h2>Registros</h2>
+  <p>La base de datos de nuestro servidor nunca guarda direcciones IP. Cloudflare, donde funciona nuestro servidor, conserva registros de solicitudes hasta 7 días: la hora de cada solicitud, qué pidió y detalles técnicos de la conexión, que pueden incluir la dirección IP. Nuestros propios registros solo anotan identificadores, estados, tiempos, modelos y costes, nunca un dibujo, una descripción ni instrucciones para la IA.</p>
+
+  <h2>Compartir y guardar</h2>
+  <p>Los vídeos revelación, los vídeos, las imágenes y el PDF del álbum del año se crean en tu iPhone, y solo van adonde los compartas o los guardes. Un vídeo revelación puede incluir la grabación de tu hijo. Los vídeos y las imágenes llevan una pequeña marca «Hecho con Paperhop», que también indica a quien los ve que se crearon con IA; con Plus, puedes quitarla en Ajustes.</p>
+
+  <h2>Tus opciones</h2>
+  <p><em>Ajustes → Permiso de IA → Retirar el permiso de IA</em> hace que la app deje de enviar dibujos. El escaneo y la nevera siguen funcionando. Puedes desactivar las notificaciones en los Ajustes de tu iPhone.</p>
+
+  <h2>Eliminar tus datos</h2>
+  <p>Elimina un dibujo desde su página, o a un niño y sus dibujos en <em>Ajustes → Niños</em>; se elimina de tu iCloud y de los dispositivos de tu familia. Al eliminar la app se borra lo que guardaba en ese iPhone. Para quitar también los datos de Paperhop de iCloud, abre <em>Ajustes → tu nombre → iCloud → Almacenamiento</em> en tu iPhone y elige Paperhop.</p>
+  <p>Nuestro servidor elimina por sí solo los dibujos y lo que se crea a partir de ellos en un plazo de 24 horas. Si quieres que eliminemos los registros sobre tu cuenta de Apple, escríbenos. Paperhop no tiene cuentas, así que no podemos buscarte por tu nombre ni por tu correo; acordaremos contigo cómo encontrarlos.</p>
+
+  <h2>Niños</h2>
+  <p>Paperhop es para padres. Los niños dibujan, hablan de sus dibujos y los ven cobrar vida, pero es el padre o la madre quien configura la app, acepta la pantalla de permiso y hace cada compra. No recopilamos a sabiendas datos personales de niños: sus nombres, edades y grabaciones nunca nos llegan, y un dibujo y su descripción solo nos llegan después de que el padre o la madre lo acepte, y se eliminan en un plazo de 24 horas.</p>
+
+  <h2>Dónde se procesan</h2>
+  <p>Nuestro servidor funciona en la red mundial de Cloudflare. fal, Google y OpenAI procesan datos en Estados Unidos y otros países, y Kuaishou en Singapur, así que un dibujo y su descripción pueden procesarse fuera de tu país.</p>
+
+  <h2>Sin anuncios ni seguimiento</h2>
+  <p>Paperhop no tiene anuncios, ni analíticas, ni seguimiento. No usa el identificador de publicidad de Apple, y nunca vendemos tus datos ni los compartimos con fines publicitarios.</p>
+
+  <h2>Tus derechos</h2>
+  <p>Según dónde vivas, puedes preguntarnos qué datos tenemos sobre ti y pedirnos que los corrijamos o eliminemos, y puedes presentar una reclamación ante tu autoridad de protección de datos. Para cualquiera de estas cosas, escríbenos.</p>
+
+  <h2>Versiones de prueba (TestFlight)</h2>
+  <p>Si pruebas una versión preliminar con TestFlight de Apple, Apple puede compartir con nosotros informes de fallos, y los comentarios y capturas de pantalla que decidas enviar, como se describe en las condiciones de TestFlight de Apple. Solo los usamos para mejorar la app.</p>
+
+  <h2>Cuando nos escribes</h2>
+  <p>Si nos escribes, recibimos tu dirección de correo y lo que nos cuentes. Solo lo usamos para responderte y resolver el problema, y lo eliminamos cuando ya no hace falta para eso.</p>
+
+  <h2>Cambios</h2>
+  <p>Si Paperhop empieza a tratar los datos de otra forma, por ejemplo enviando algo nuevo o usando un servicio nuevo, actualizaremos esta página y la fecha de arriba antes de publicar esa versión, y la pantalla de permiso lo indicará.</p>
+
+  <h2>Contacto</h2>
+  <p>Preguntas sobre privacidad: <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a></p>
+  <footer>Paperhop, de Plainroot Studio · <a href="support#es">Ayuda de Paperhop</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Condiciones de uso</a></footer>
+</section>
+
+<hr>
+
+<section id="es-419" lang="es-419">
+  <h1>Política de privacidad de Paperhop</h1>
+  <p class="meta">Última actualización: 4 de noviembre de 2026</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
+
+  <div class="summary">
+    <p><strong>En resumen:</strong> Paperhop es para padres. Los dibujos de tus hijos, sus nombres, sus edades y sus grabaciones se quedan en tus dispositivos y en el iCloud de tu familia. Un dibujo solo sale de tu iPhone cuando le das vida o creas un estilo, y solo después de que lo aceptes en la pantalla de permiso. Entonces, el dibujo y su descripción van a nuestro servidor y a los servicios de IA que crean el video o la imagen, y nuestro servidor los elimina en un plazo de 24 horas. No hay anuncios, ni analíticas, ni seguimiento.</p>
+  </div>
+
+  <h2>Quiénes somos</h2>
+  <p>Paperhop es una app de Plainroot Studio («nosotros»). Esta política se aplica a la app Paperhop para iPhone y a sus widgets.</p>
+
+  <h2>Lo que se queda con tu familia</h2>
+  <p>Tus dibujos y sus títulos, los nombres de tus hijos con su año y mes de nacimiento, las grabaciones y las palabras que se transcriben de ellas, tus favoritos, y los videos y las imágenes que creaste se guardan en tu iPhone. Si iCloud está activado para Paperhop, también se sincronizan a través del iCloud privado de tu familia con los dispositivos que usan la misma cuenta de Apple. Ese almacenamiento es de Apple y nosotros no podemos leerlo.</p>
+  <p>Las grabaciones se pasan a texto en tu iPhone. La grabación en sí nunca se envía, ni a nosotros ni a los servicios de IA.</p>
+  <p>Los widgets muestran una copia de los dibujos y favoritos recientes guardada en tu iPhone.</p>
+
+  <h2>Qué envía la app y cuándo</h2>
+  <p>Solo cuando tocas <em>Darle vida</em> o creas un estilo, y solo después de aceptar en la pantalla de permiso, la app envía a nuestro servidor:</p>
+  <ul>
+    <li>el dibujo, como imagen de 1280 píxeles como máximo en su lado más largo, sin metadatos de foto como la ubicación;</li>
+    <li>su descripción, tal como la dejaste en la pantalla Animar (hasta 300 caracteres), y el idioma en que está;</li>
+    <li>el aspecto que elegiste.</li>
+  </ul>
+  <p>Nunca envía el nombre, la edad, el cumpleaños ni la grabación de tu hijo. La descripción se envía tal como está escrita, así que es mejor no poner en ella nombres ni otros datos personales.</p>
+
+  <h2>Los servicios de IA</h2>
+  <p>Nuestro servidor funciona en Cloudflare. Pasa el dibujo y su descripción a fal (fal.ai), que ejecuta los modelos de IA que usa Paperhop:</p>
+  <ul>
+    <li><strong>Gemini, de Google,</strong> comprueba que es un dibujo hecho a mano, sin ninguna persona real ni foto, y escribe el movimiento a partir de la descripción. fal accede a él a través de OpenRouter, un servicio de enrutamiento.</li>
+    <li><strong>GPT Image, de OpenAI,</strong> crea los estilos de recuerdo y la imagen de la que parten los videos Como de verdad, Peluche y Plastilina.</li>
+    <li><strong>Kling, de Kuaishou,</strong> crea el video.</li>
+  </ul>
+  <p>Estos servicios solo reciben el dibujo y un texto basado en su descripción, enviados desde nuestro servidor. No reciben nada de tu iPhone, ni nada con tu nombre o el de tu hijo.</p>
+
+  <h2>Cuánto tiempo se conserva</h2>
+  <ul>
+    <li><strong>Nuestro servidor</strong> elimina el dibujo, su descripción y lo que se crea a partir de él en un plazo de 24 horas, normalmente en cuanto tu iPhone descarga el resultado. Un registro de cada trabajo, sin imagen, descripción ni instrucciones para la IA, se elimina a los 30 días.</li>
+    <li><strong>fal</strong> no guarda un historial de nuestras solicitudes, y los archivos que crea vencen en menos de una hora. Nuestro servidor los elimina en cuanto tiene su propia copia.</li>
+    <li><strong>Google</strong> puede conservar las solicitudes durante un tiempo limitado para detectar abusos: hasta 55 días, o hasta 90 días si sus controles de seguridad marcan algo. No las usa para entrenar sus modelos.</li>
+    <li><strong>OpenAI</strong> puede conservar las solicitudes hasta 30 días para detectar abusos, y más tiempo solo cuando la ley lo exige o para evitar daños. No las usa para entrenar sus modelos.</li>
+    <li><strong>Kuaishou</strong>, a través de Kling AI Pte. Ltd., guarda los datos en sus servidores de Singapur y los conserva mientras los necesita para prestar su servicio. Su política de privacidad dice que no los usa para entrenar modelos.</li>
+  </ul>
+
+  <h2>Lo que guarda nuestro servidor para tu plan</h2>
+  <p>Para saber qué plan tienes y cuántos videos y estilos de recuerdo te quedan, nuestro servidor guarda:</p>
+  <ul>
+    <li>un identificador que Apple asigna a tu cuenta de Apple para Paperhop. No es tu nombre, ni tu correo, ni tu cuenta de Apple en sí, y lo comparten los dispositivos de esa cuenta de Apple;</li>
+    <li>para cada iPhone, una clave de App Attest de Apple, que demuestra que las solicitudes vienen de la app Paperhop auténtica, y su token de notificaciones si permites las notificaciones;</li>
+    <li>tus compras de Paperhop tal como Apple las firma: el producto, sus fechas, el país de la App Store, si está en la semana gratis y cualquier reembolso;</li>
+    <li>un registro de los videos y estilos de recuerdo que tu plan ha dado, usado y devuelto.</li>
+  </ul>
+  <p>Cada solicitud incluye también el número de versión de la app. Conservamos estos registros mientras hagan falta para tu plan y tus videos.</p>
+
+  <h2>Notificaciones</h2>
+  <p>Si permites las notificaciones, nuestro servidor usa el token de notificaciones de tu iPhone, a través de Apple, para avisarte cuando un video está listo o no se pudo crear. Los mensajes son genéricos, como «Tu dibujo ya tiene vida», y nunca incluyen el dibujo ni su título.</p>
+
+  <h2>Compras</h2>
+  <p>Paperhop Plus y los paquetes de videos se compran a través de Apple, con los términos y la política de privacidad de Apple. Nunca recibimos tus datos de pago. La app envía a nuestro servidor el registro firmado por Apple de cada compra, para que recibas el número correcto de videos y estilos de recuerdo.</p>
+
+  <h2>Registros</h2>
+  <p>La base de datos de nuestro servidor nunca guarda direcciones IP. Cloudflare, donde funciona nuestro servidor, conserva registros de solicitudes hasta 7 días: la hora de cada solicitud, qué pidió y detalles técnicos de la conexión, que pueden incluir la dirección IP. Nuestros propios registros solo anotan identificadores, estados, tiempos, modelos y costos, nunca un dibujo, una descripción ni instrucciones para la IA.</p>
+
+  <h2>Compartir y guardar</h2>
+  <p>Los videos revelación, los videos, las imágenes y el PDF del álbum del año se crean en tu iPhone, y solo van adonde los compartas o los guardes. Un video revelación puede incluir la grabación de tu hijo. Los videos y las imágenes llevan una pequeña marca «Hecho con Paperhop», que también indica a quien los ve que se crearon con IA; con Plus, puedes quitarla en Configuración.</p>
+
+  <h2>Tus opciones</h2>
+  <p><em>Configuración → Permiso de IA → Retirar el permiso de IA</em> hace que la app deje de enviar dibujos. El escaneo y el refri siguen funcionando. Puedes desactivar las notificaciones en la Configuración de tu iPhone.</p>
+
+  <h2>Eliminar tus datos</h2>
+  <p>Elimina un dibujo desde su página, o a un niño y sus dibujos en <em>Configuración → Niños</em>; se elimina de tu iCloud y de los dispositivos de tu familia. Al eliminar la app se borra lo que guardaba en ese iPhone. Para quitar también los datos de Paperhop de iCloud, abre <em>Configuración → tu nombre → iCloud → Almacenamiento</em> en tu iPhone y elige Paperhop.</p>
+  <p>Nuestro servidor elimina por sí solo los dibujos y lo que se crea a partir de ellos en un plazo de 24 horas. Si quieres que eliminemos los registros sobre tu cuenta de Apple, escríbenos. Paperhop no tiene cuentas, así que no podemos buscarte por tu nombre ni por tu correo; acordaremos contigo cómo encontrarlos.</p>
+
+  <h2>Niños</h2>
+  <p>Paperhop es para padres. Los niños dibujan, hablan de sus dibujos y los ven cobrar vida, pero es el padre o la madre quien configura la app, acepta la pantalla de permiso y hace cada compra. No recopilamos a sabiendas datos personales de niños: sus nombres, edades y grabaciones nunca nos llegan, y un dibujo y su descripción solo nos llegan después de que el padre o la madre lo acepte, y se eliminan en un plazo de 24 horas.</p>
+
+  <h2>Dónde se procesan</h2>
+  <p>Nuestro servidor funciona en la red mundial de Cloudflare. fal, Google y OpenAI procesan datos en Estados Unidos y otros países, y Kuaishou en Singapur, así que un dibujo y su descripción pueden procesarse fuera de tu país.</p>
+
+  <h2>Sin anuncios ni seguimiento</h2>
+  <p>Paperhop no tiene anuncios, ni analíticas, ni seguimiento. No usa el identificador de publicidad de Apple, y nunca vendemos tus datos ni los compartimos con fines publicitarios.</p>
+
+  <h2>Tus derechos</h2>
+  <p>Según dónde vivas, puedes preguntarnos qué datos tenemos sobre ti y pedirnos que los corrijamos o eliminemos, y puedes presentar una reclamación ante tu autoridad de protección de datos. Para cualquiera de estas cosas, escríbenos.</p>
+
+  <h2>Versiones de prueba (TestFlight)</h2>
+  <p>Si pruebas una versión preliminar con TestFlight de Apple, Apple puede compartir con nosotros informes de fallos, y los comentarios y capturas de pantalla que decidas enviar, como se describe en los términos de TestFlight de Apple. Solo los usamos para mejorar la app.</p>
+
+  <h2>Cuando nos escribes</h2>
+  <p>Si nos escribes, recibimos tu dirección de correo y lo que nos cuentes. Solo lo usamos para responderte y resolver el problema, y lo eliminamos cuando ya no hace falta para eso.</p>
+
+  <h2>Cambios</h2>
+  <p>Si Paperhop empieza a tratar los datos de otra forma, por ejemplo enviando algo nuevo o usando un servicio nuevo, actualizaremos esta página y la fecha de arriba antes de publicar esa versión, y la pantalla de permiso lo indicará.</p>
+
+  <h2>Contacto</h2>
+  <p>Preguntas sobre privacidad: <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a></p>
+  <footer>Paperhop, de Plainroot Studio · <a href="support#es-419">Ayuda de Paperhop</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Términos de uso</a></footer>
+</section>
+
+<hr>
+
+<section id="de" lang="de">
+  <h1>Datenschutzerklärung von Paperhop</h1>
+  <p class="meta">Zuletzt aktualisiert: 4. November 2026</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
+
+  <div class="summary">
+    <p><strong>Kurz gesagt:</strong> Paperhop ist für Eltern. Die Zeichnungen deiner Kinder, ihre Namen, ihr Alter und ihre Aufnahmen bleiben auf deinen Geräten und in der iCloud deiner Familie. Eine Zeichnung verlässt dein iPhone nur, wenn du sie zum Leben erweckst oder ein Erinnerungsbild erstellst, und erst, nachdem du der Einwilligung zugestimmt hast. Dann gehen die Zeichnung und ihre Beschreibung an unseren Server und an die KI-Dienste, die das Video oder Bild erstellen, und unser Server löscht sie innerhalb von 24 Stunden. Es gibt keine Werbung, keine Analysen und kein Tracking.</p>
+  </div>
+
+  <h2>Wer wir sind</h2>
+  <p>Paperhop wird von Plainroot Studio („wir“) entwickelt. Diese Erklärung gilt für die Paperhop-App für das iPhone und ihre Widgets.</p>
+
+  <h2>Was bei deiner Familie bleibt</h2>
+  <p>Deine Zeichnungen und ihre Titel, die Namen deiner Kinder mit Geburtsjahr und -monat, die Aufnahmen und der daraus entstandene Text, deine Favoriten sowie die Videos und Bilder, die du erstellt hast, werden auf deinem iPhone gespeichert. Ist iCloud für Paperhop aktiviert, werden sie außerdem über die private iCloud deiner Familie mit den Geräten synchronisiert, die mit demselben Apple Account angemeldet sind. Dieser Speicher gehört Apple, und wir können ihn nicht lesen.</p>
+  <p>Eine Aufnahme wird auf deinem iPhone in Text umgewandelt. Die Aufnahme selbst geht nie an uns oder an KI-Dienste.</p>
+  <p>Die Widgets zeigen eine Kopie der neuesten Zeichnungen und Favoriten, die auf deinem iPhone gespeichert ist.</p>
+
+  <h2>Was die App sendet und wann</h2>
+  <p>Nur wenn du auf <em>Zum Leben erwecken</em> tippst oder ein Erinnerungsbild erstellst, und erst, nachdem du der Einwilligung zugestimmt hast, sendet die App an unseren Server:</p>
+  <ul>
+    <li>die Zeichnung als Bild mit höchstens 1280 Pixeln an der längeren Seite, ohne Fotometadaten wie den Aufnahmeort;</li>
+    <li>ihre Beschreibung, so wie du sie auf dem Bildschirm „Animieren“ gelassen hast (bis zu 300 Zeichen), und in welcher Sprache sie ist;</li>
+    <li>den Look, den du gewählt hast.</li>
+  </ul>
+  <p>Sie sendet nie den Namen, das Alter, den Geburtstag oder die Aufnahme deines Kindes. Die Beschreibung wird so gesendet, wie sie geschrieben ist; lass Namen und andere persönliche Angaben darin also am besten weg.</p>
+
+  <h2>Die KI-Dienste</h2>
+  <p>Unser Server läuft bei Cloudflare. Er gibt die Zeichnung und ihre Beschreibung an fal (fal.ai) weiter, das die KI-Modelle ausführt, die Paperhop nutzt:</p>
+  <ul>
+    <li><strong>Gemini von Google</strong> prüft, ob es eine von Hand gemachte Zeichnung ohne echte Person und ohne Foto ist, und schreibt aus der Beschreibung die Bewegung. fal erreicht Gemini über OpenRouter, einen Vermittlungsdienst.</li>
+    <li><strong>GPT Image von OpenAI</strong> erstellt die Erinnerungsbilder und das Bild, mit dem die Videos „Wie echt“, „Kuscheltier“ und „Knete“ beginnen.</li>
+    <li><strong>Kling von Kuaishou</strong> erstellt das Video.</li>
+  </ul>
+  <p>Diese Dienste erhalten nur die Zeichnung und einen Text auf Grundlage ihrer Beschreibung, gesendet von unserem Server. Sie erhalten nichts von deinem iPhone und nichts, was dich oder dein Kind namentlich nennt.</p>
+
+  <h2>Wie lange etwas gespeichert wird</h2>
+  <ul>
+    <li><strong>Unser Server</strong> löscht die Zeichnung, ihre Beschreibung und alles, was daraus erstellt wird, innerhalb von 24 Stunden, meist sobald dein iPhone das Ergebnis heruntergeladen hat. Ein Eintrag zu jedem Auftrag, ohne Bild, Beschreibung oder Prompt, wird nach 30 Tagen gelöscht.</li>
+    <li><strong>fal</strong> speichert keinen Verlauf unserer Anfragen, und die Dateien, die fal erstellt, verfallen innerhalb einer Stunde. Unser Server löscht sie, sobald er eine eigene Kopie hat.</li>
+    <li><strong>Google</strong> kann Anfragen für begrenzte Zeit speichern, um Missbrauch zu erkennen: bis zu 55 Tage, oder bis zu 90 Tage bei allem, was seine Sicherheitsprüfungen markieren. Google nutzt sie nicht zum Training seiner Modelle.</li>
+    <li><strong>OpenAI</strong> kann Anfragen bis zu 30 Tage speichern, um Missbrauch zu erkennen, und länger nur, wenn das Gesetz es verlangt oder um Schaden abzuwenden. OpenAI nutzt sie nicht zum Training seiner Modelle.</li>
+    <li><strong>Kuaishou</strong>: Die Kling AI Pte. Ltd. speichert Daten auf ihren Servern in Singapur und behält sie, solange sie für ihren Dienst gebraucht werden. Laut ihrer Datenschutzerklärung werden sie nicht zum Training von Modellen genutzt.</li>
+  </ul>
+
+  <h2>Was unser Server für dein Abo speichert</h2>
+  <p>Um zu wissen, welches Abo du hast und wie viele Videos und Erinnerungsbilder noch übrig sind, speichert unser Server:</p>
+  <ul>
+    <li>eine ID, die Apple deinem Apple Account für Paperhop zuweist. Sie ist weder dein Name noch deine E-Mail-Adresse noch dein Apple Account selbst, und alle Geräte mit diesem Apple Account teilen sie;</li>
+    <li>für jedes iPhone einen Schlüssel aus Apples App Attest, der belegt, dass Anfragen von der echten Paperhop-App kommen, und sein Mitteilungstoken, wenn du Mitteilungen erlaubst;</li>
+    <li>deine Paperhop-Käufe so, wie Apple sie signiert: das Produkt, seine Daten, das App-Store-Land, ob es in der Gratiswoche ist, und eine etwaige Rückerstattung;</li>
+    <li>einen Eintrag darüber, wie viele Videos und Erinnerungsbilder dein Abo vergeben hat, wie viele verbraucht und wie viele zurückgegeben wurden.</li>
+  </ul>
+  <p>Jede Anfrage enthält außerdem die Versionsnummer der App. Wir bewahren diese Einträge auf, solange sie für dein Abo und deine Videos nötig sind.</p>
+
+  <h2>Mitteilungen</h2>
+  <p>Wenn du Mitteilungen erlaubst, verwendet unser Server über Apple das Mitteilungstoken deines iPhone, um dir zu sagen, wann ein Video fertig ist oder nicht erstellt werden konnte. Die Mitteilungen sind allgemein gehalten, etwa „Deine Zeichnung ist lebendig“, und enthalten nie die Zeichnung oder ihren Titel.</p>
+
+  <h2>Käufe</h2>
+  <p>Paperhop Plus und Videopakete werden über Apple gekauft, zu Apples Bedingungen und nach Apples Datenschutzrichtlinie. Wir erhalten nie deine Zahlungsdaten. Die App sendet unserem Server den von Apple signierten Beleg jedes Kaufs, damit du die richtige Zahl an Videos und Erinnerungsbildern bekommst.</p>
+
+  <h2>Protokolle</h2>
+  <p>Die Datenbank unseres Servers speichert nie IP-Adressen. Cloudflare, wo unser Server läuft, speichert Anfrageprotokolle bis zu 7 Tage: den Zeitpunkt jeder Anfrage, was angefragt wurde, und technische Angaben zur Verbindung, zu denen die IP-Adresse gehören kann. Unsere eigenen Protokollzeilen enthalten nur IDs, Status, Zeiten, Modelle und Kosten, nie eine Zeichnung, eine Beschreibung oder einen Prompt.</p>
+
+  <h2>Teilen und sichern</h2>
+  <p>Verwandlungsvideos, Videos, Bilder und das Jahresalbum als PDF werden auf deinem iPhone erstellt und gehen nur dorthin, wo du sie teilst oder sicherst. Ein Verwandlungsvideo kann die Aufnahme deines Kindes enthalten. Videos und Bilder tragen ein kleines Wasserzeichen „Erstellt mit Paperhop“, das Betrachtern auch zeigt, dass sie mit KI erstellt wurden; mit Plus kannst du es in den Einstellungen ausschalten.</p>
+
+  <h2>Deine Möglichkeiten</h2>
+  <p><em>Einstellungen → KI-Einwilligung → KI-Einwilligung widerrufen</em> beendet das Senden von Zeichnungen. Scannen und der Kühlschrank funktionieren weiter. Mitteilungen kannst du in den Einstellungen deines iPhone ausschalten.</p>
+
+  <h2>Deine Daten löschen</h2>
+  <p>Lösche eine Zeichnung auf ihrer Seite oder ein Kind mit seinen Zeichnungen unter <em>Einstellungen → Kinder</em>; sie werden aus deiner iCloud und von den Geräten deiner Familie entfernt. Wenn du die App löschst, wird entfernt, was sie auf diesem iPhone gespeichert hat. Um die Daten von Paperhop auch aus iCloud zu entfernen, öffne auf deinem iPhone <em>Einstellungen → dein Name → iCloud → Speicher</em> und wähle Paperhop.</p>
+  <p>Unser Server löscht Zeichnungen und alles, was daraus erstellt wurde, von selbst innerhalb von 24 Stunden. Wenn die Einträge zu deinem Apple Account gelöscht werden sollen, schreib uns. Paperhop hat kein Benutzerkonto, daher können wir dich nicht über deinen Namen oder deine E-Mail-Adresse finden; wir klären mit dir, wie wir die Einträge finden.</p>
+
+  <h2>Kinder</h2>
+  <p>Paperhop ist für Eltern. Kinder zeichnen, erzählen von ihren Zeichnungen und sehen zu, wie sie lebendig werden; aber ein Elternteil richtet die App ein, stimmt der Einwilligung zu und tätigt jeden Kauf. Wir erheben wissentlich keine personenbezogenen Daten von Kindern: Ihre Namen, ihr Alter und ihre Aufnahmen erreichen uns nie, und eine Zeichnung mit ihrer Beschreibung erreicht uns erst, nachdem ein Elternteil zugestimmt hat, und wird innerhalb von 24 Stunden gelöscht.</p>
+
+  <h2>Wo die Daten verarbeitet werden</h2>
+  <p>Unser Server läuft im weltweiten Netzwerk von Cloudflare. fal, Google und OpenAI verarbeiten Daten in den USA und anderen Ländern, Kuaishou in Singapur; eine Zeichnung und ihre Beschreibung können also außerhalb deines Landes verarbeitet werden.</p>
+
+  <h2>Keine Werbung, kein Tracking</h2>
+  <p>Paperhop hat keine Werbung, keine Analysen und kein Tracking. Die App nutzt Apples Werbe-ID nicht, und wir verkaufen deine Daten nie und geben sie nicht für Werbung weiter.</p>
+
+  <h2>Deine Rechte</h2>
+  <p>Je nachdem, wo du lebst, kannst du von uns erfahren, welche Daten wir über dich haben, sie berichtigen oder löschen lassen und dich bei deiner Datenschutzbehörde beschweren. Für all das schreib uns.</p>
+
+  <h2>Testversionen (TestFlight)</h2>
+  <p>Wenn du eine Vorabversion über Apples TestFlight testest, kann Apple Absturzberichte sowie Feedback und Bildschirmfotos, die du senden möchtest, mit uns teilen, wie in Apples TestFlight-Bedingungen beschrieben. Wir nutzen sie nur, um die App zu verbessern.</p>
+
+  <h2>Wenn du uns schreibst</h2>
+  <p>Wenn du uns schreibst, erhalten wir deine E-Mail-Adresse und alles, was du schreibst. Wir nutzen es nur, um dir zu antworten und das Problem zu lösen, und löschen es, wenn es dafür nicht mehr gebraucht wird.</p>
+
+  <h2>Änderungen</h2>
+  <p>Wenn Paperhop anfängt, Daten anders zu verarbeiten, etwa indem es etwas Neues sendet oder einen neuen Dienst nutzt, aktualisieren wir diese Seite und das Datum oben, bevor diese Version erscheint, und die Einwilligung weist darauf hin.</p>
+
+  <h2>Kontakt</h2>
+  <p>Fragen zum Datenschutz: <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a></p>
+  <footer>Paperhop von Plainroot Studio · <a href="support#de">Paperhop-Support</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Nutzungsbedingungen</a></footer>
+</section>
+
+<hr>
+
+<section id="fr" lang="fr">
+  <h1>Politique de confidentialité de Paperhop</h1>
+  <p class="meta">Dernière mise à jour : 4 novembre 2026</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
+
+  <div class="summary">
+    <p><strong>En bref :</strong> Paperhop s’adresse aux parents. Les dessins de vos enfants, leurs prénoms, leurs âges et leurs enregistrements restent sur vos appareils et dans l’iCloud de votre famille. Un dessin ne quitte votre iPhone que lorsque vous lui donnez vie ou créez un style, et seulement après votre accord sur l’écran de consentement. Le dessin et sa description sont alors envoyés à notre serveur et aux services d’IA qui créent la vidéo ou l’image, et notre serveur les supprime sous 24 heures. Pas de publicité, pas d’analyses, pas de suivi.</p>
+  </div>
+
+  <h2>Qui sommes-nous ?</h2>
+  <p>Paperhop est développé par Plainroot Studio (« nous »). Cette politique s’applique à l’app Paperhop pour iPhone et à ses widgets.</p>
+
+  <h2>Ce qui reste dans votre famille</h2>
+  <p>Vos dessins et leurs titres, les prénoms de vos enfants avec leur année et leur mois de naissance, les enregistrements et les mots qui en sont transcrits, vos favoris, ainsi que les vidéos et les images que vous avez créées sont conservés sur votre iPhone. Si iCloud est activé pour Paperhop, ils sont aussi synchronisés, via l’iCloud privé de votre famille, avec les appareils connectés au même compte Apple. Cet espace appartient à Apple et nous ne pouvons pas le lire.</p>
+  <p>Un enregistrement est transcrit sur votre iPhone. L’enregistrement lui-même n’est jamais envoyé, ni à nous ni aux services d’IA.</p>
+  <p>Les widgets affichent une copie des dessins et des favoris récents, conservée sur votre iPhone.</p>
+
+  <h2>Ce que l’app envoie, et quand</h2>
+  <p>Uniquement lorsque vous touchez <em>Donner vie</em> ou créez un style, et uniquement après avoir donné votre accord sur l’écran de consentement, l’app envoie à notre serveur :</p>
+  <ul>
+    <li>le dessin, sous forme d’image de 1280 pixels au plus sur son côté le plus long, sans métadonnées photo comme le lieu ;</li>
+    <li>sa description, telle que vous l’avez laissée sur l’écran Animer (300 caractères au maximum), et sa langue ;</li>
+    <li>le style que vous avez choisi.</li>
+  </ul>
+  <p>Elle n’envoie jamais le prénom, l’âge, la date d’anniversaire ou l’enregistrement de votre enfant. La description est envoyée telle qu’elle est écrite : mieux vaut donc n’y mettre ni prénoms ni autres informations personnelles.</p>
+
+  <h2>Les services d’IA</h2>
+  <p>Notre serveur fonctionne sur Cloudflare. Il transmet le dessin et sa description à fal (fal.ai), qui exécute les modèles d’IA utilisés par Paperhop :</p>
+  <ul>
+    <li><strong>Gemini, de Google,</strong> vérifie qu’il s’agit d’un dessin fait à la main, sans personne réelle ni photo, et rédige le mouvement à partir de la description. fal y accède via OpenRouter, un service de routage.</li>
+    <li><strong>GPT Image, d’OpenAI,</strong> crée les styles souvenirs, ainsi que l’image de départ des vidéos Comme en vrai, Peluche et Pâte à modeler.</li>
+    <li><strong>Kling, de Kuaishou,</strong> crée la vidéo.</li>
+  </ul>
+  <p>Ces services ne reçoivent que le dessin et un texte fondé sur sa description, envoyés depuis notre serveur. Ils ne reçoivent rien de votre iPhone, ni rien qui vous nomme, vous ou votre enfant.</p>
+
+  <h2>Durée de conservation</h2>
+  <ul>
+    <li><strong>Notre serveur</strong> supprime le dessin, sa description et ce qui en est créé sous 24 heures, généralement dès que votre iPhone a téléchargé le résultat. Une trace de chaque tâche, sans image, description ni prompt, est supprimée au bout de 30 jours.</li>
+    <li><strong>fal</strong> ne conserve aucun historique de nos requêtes, et les fichiers qu’il crée expirent en moins d’une heure. Notre serveur les supprime dès qu’il en a sa propre copie.</li>
+    <li><strong>Google</strong> peut conserver les requêtes pendant une durée limitée pour détecter les abus : jusqu’à 55 jours, ou jusqu’à 90 jours pour tout ce que ses contrôles de sécurité signalent. Google ne les utilise pas pour entraîner ses modèles.</li>
+    <li><strong>OpenAI</strong> peut conserver les requêtes jusqu’à 30 jours pour détecter les abus, et plus longtemps uniquement si la loi l’exige ou pour prévenir un préjudice. OpenAI ne les utilise pas pour entraîner ses modèles.</li>
+    <li><strong>Kuaishou</strong>, par l’intermédiaire de Kling AI Pte. Ltd., stocke les données sur ses serveurs à Singapour et les conserve aussi longtemps que nécessaire pour fournir son service. Sa politique de confidentialité indique qu’il ne les utilise pas pour entraîner des modèles.</li>
+  </ul>
+
+  <h2>Ce que notre serveur conserve pour votre abonnement</h2>
+  <p>Pour savoir quel abonnement vous avez et combien de vidéos et de styles souvenirs il vous reste, notre serveur conserve :</p>
+  <ul>
+    <li>un identifiant qu’Apple attribue à votre compte Apple pour Paperhop. Ce n’est ni votre nom, ni votre adresse e-mail, ni votre compte Apple lui-même, et les appareils de ce compte Apple le partagent ;</li>
+    <li>pour chaque iPhone, une clé d’App Attest d’Apple, qui prouve que les requêtes viennent de la véritable app Paperhop, et son jeton de notifications si vous autorisez les notifications ;</li>
+    <li>vos achats Paperhop tels qu’Apple les signe : le produit, ses dates, le pays de l’App Store, s’il est dans la semaine offerte, et tout remboursement ;</li>
+    <li>un relevé des vidéos et des styles souvenirs que votre abonnement a accordés, utilisés et rendus.</li>
+  </ul>
+  <p>Chaque requête comporte aussi le numéro de version de l’app. Nous conservons ces relevés tant qu’ils sont nécessaires pour votre abonnement et vos vidéos.</p>
+
+  <h2>Notifications</h2>
+  <p>Si vous autorisez les notifications, notre serveur utilise le jeton de notifications de votre iPhone, via Apple, pour vous prévenir quand une vidéo est prête ou n’a pas pu être créée. Les messages sont génériques, par exemple « Votre dessin a pris vie », et ne contiennent jamais le dessin ni son titre.</p>
+
+  <h2>Achats</h2>
+  <p>Paperhop Plus et les packs de vidéos s’achètent via Apple, selon les conditions et la politique de confidentialité d’Apple. Nous ne recevons jamais vos informations de paiement. L’app envoie à notre serveur la preuve de chaque achat signée par Apple, pour que vous receviez le bon nombre de vidéos et de styles souvenirs.</p>
+
+  <h2>Journaux</h2>
+  <p>La base de données de notre serveur n’enregistre jamais d’adresses IP. Cloudflare, sur lequel fonctionne notre serveur, conserve des journaux de requêtes pendant 7 jours au plus : l’heure de chaque requête, ce qui a été demandé et des détails techniques de la connexion, qui peuvent inclure l’adresse IP. Nos propres journaux n’enregistrent que des identifiants, des états, des durées, des modèles et des coûts, jamais un dessin, une description ou un prompt.</p>
+
+  <h2>Partage et enregistrement</h2>
+  <p>Les vidéos révélation, les vidéos, les images et le PDF de l’album de l’année sont créés sur votre iPhone, et ne vont que là où vous les partagez ou les enregistrez. Une vidéo révélation peut contenir l’enregistrement de votre enfant. Les vidéos et les images portent un petit filigrane « Créé avec Paperhop », qui indique aussi qu’elles ont été créées avec l’IA ; avec Plus, vous pouvez le retirer dans Réglages.</p>
+
+  <h2>Vos choix</h2>
+  <p><em>Réglages → Consentement IA → Retirer le consentement IA</em> arrête l’envoi des dessins. Le scan et le frigo continuent de fonctionner. Vous pouvez désactiver les notifications dans les Réglages de votre iPhone.</p>
+
+  <h2>Supprimer vos données</h2>
+  <p>Supprimez un dessin depuis sa page, ou un enfant et ses dessins dans <em>Réglages → Enfants</em> ; ils sont supprimés de votre iCloud et des appareils de votre famille. Supprimer l’app efface ce qu’elle a stocké sur cet iPhone. Pour retirer aussi les données de Paperhop d’iCloud, ouvrez <em>Réglages → votre nom → iCloud → Stockage</em> sur votre iPhone et choisissez Paperhop.</p>
+  <p>Notre serveur supprime de lui-même les dessins et ce qui en est créé sous 24 heures. Pour faire supprimer les relevés liés à votre compte Apple, écrivez-nous. Paperhop n’a pas de compte utilisateur : nous ne pouvons donc pas vous retrouver par votre nom ou votre adresse e-mail ; nous verrons avec vous comment les retrouver.</p>
+
+  <h2>Enfants</h2>
+  <p>Paperhop s’adresse aux parents. Les enfants dessinent, racontent leurs dessins et les regardent prendre vie, mais c’est un parent qui configure l’app, donne son accord sur l’écran de consentement et effectue chaque achat. Nous ne collectons pas sciemment de données personnelles d’enfants : leurs prénoms, leurs âges et leurs enregistrements ne nous parviennent jamais, et un dessin et sa description ne nous parviennent qu’après l’accord d’un parent, et sont supprimés sous 24 heures.</p>
+
+  <h2>Lieu de traitement</h2>
+  <p>Notre serveur fonctionne sur le réseau mondial de Cloudflare. fal, Google et OpenAI traitent les données aux États-Unis et dans d’autres pays, et Kuaishou à Singapour : un dessin et sa description peuvent donc être traités hors de votre pays.</p>
+
+  <h2>Ni publicité ni suivi</h2>
+  <p>Paperhop n’a ni publicité, ni analyses, ni suivi. L’app n’utilise pas l’identifiant publicitaire d’Apple, et nous ne vendons jamais vos données ni ne les partageons à des fins publicitaires.</p>
+
+  <h2>Vos droits</h2>
+  <p>Selon votre lieu de résidence, vous pouvez nous demander quelles données nous détenons sur vous, les faire corriger ou supprimer, et déposer une plainte auprès de votre autorité de protection des données. Pour cela, écrivez-nous.</p>
+
+  <h2>Versions de test (TestFlight)</h2>
+  <p>Si vous testez une version préliminaire avec TestFlight d’Apple, Apple peut partager avec nous des rapports de plantage, ainsi que les commentaires et les captures d’écran que vous choisissez d’envoyer, comme le prévoient les conditions de TestFlight d’Apple. Nous ne les utilisons que pour améliorer l’app.</p>
+
+  <h2>Quand vous nous écrivez</h2>
+  <p>Si vous nous écrivez, nous recevons votre adresse e-mail et ce que vous écrivez. Nous ne les utilisons que pour vous répondre et résoudre le problème, et nous les supprimons quand ils ne sont plus nécessaires à cette fin.</p>
+
+  <h2>Modifications</h2>
+  <p>Si Paperhop se met à traiter les données autrement, par exemple en envoyant quelque chose de nouveau ou en utilisant un nouveau service, nous mettrons à jour cette page et la date ci-dessus avant la sortie de cette version, et l’écran de consentement l’indiquera.</p>
+
+  <h2>Contact</h2>
+  <p>Questions sur la confidentialité : <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a></p>
+  <footer>Paperhop par Plainroot Studio · <a href="support#fr">Assistance Paperhop</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Conditions d’utilisation</a></footer>
+</section>
+
+<hr>
+
+<section id="it" lang="it">
+  <h1>Informativa sulla privacy di Paperhop</h1>
+  <p class="meta">Ultimo aggiornamento: 4 novembre 2026</p>
+  <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#es">Español (España)</a><a href="#es-419">Español (Latinoamérica)</a><a href="#de">Deutsch</a><a href="#fr">Français</a><a href="#it">Italiano</a></nav>
+
+  <div class="summary">
+    <p><strong>In breve:</strong> Paperhop è pensata per i genitori. I disegni dei tuoi figli, i loro nomi, le loro età e le loro registrazioni restano sui tuoi dispositivi e nell’iCloud della tua famiglia. Un disegno lascia il tuo iPhone solo quando gli dai vita o crei uno stile, e solo dopo che hai dato il consenso nella schermata del consenso. A quel punto il disegno e la sua descrizione vanno al nostro server e ai servizi di IA che creano il video o l’immagine, e il nostro server li elimina entro 24 ore. Niente pubblicità, niente analisi, nessun tracciamento.</p>
+  </div>
+
+  <h2>Chi siamo</h2>
+  <p>Paperhop è realizzata da Plainroot Studio («noi»). Questa informativa riguarda l’app Paperhop per iPhone e i suoi widget.</p>
+
+  <h2>Cosa resta alla tua famiglia</h2>
+  <p>I tuoi disegni e i loro titoli, i nomi dei tuoi figli con anno e mese di nascita, le registrazioni e le parole trascritte da esse, i tuoi preferiti, e i video e le immagini che hai creato sono conservati sul tuo iPhone. Se iCloud è attivo per Paperhop, vengono anche sincronizzati tramite l’iCloud privato della tua famiglia con i dispositivi su cui hai effettuato l’accesso con lo stesso Apple Account. Quello spazio è di Apple e noi non possiamo leggerlo.</p>
+  <p>Una registrazione viene trascritta sul tuo iPhone. La registrazione in sé non arriva mai a noi né ai servizi di IA.</p>
+  <p>I widget mostrano una copia dei disegni e dei preferiti recenti, conservata sul tuo iPhone.</p>
+
+  <h2>Cosa invia l’app, e quando</h2>
+  <p>Solo quando tocchi <em>Dagli vita</em> o crei uno stile, e solo dopo che hai dato il consenso nella schermata del consenso, l’app invia al nostro server:</p>
+  <ul>
+    <li>il disegno, come immagine di massimo 1280 pixel sul lato più lungo, senza metadati della foto come la posizione;</li>
+    <li>la sua descrizione, così come l’hai lasciata nella schermata Anima (fino a 300 caratteri), e la lingua in cui è scritta;</li>
+    <li>il look che hai scelto.</li>
+  </ul>
+  <p>Non invia mai il nome, l’età, il compleanno o la registrazione di tuo figlio. La descrizione viene inviata così come è scritta, quindi è meglio non inserire nomi o altri dati personali.</p>
+
+  <h2>I servizi di IA</h2>
+  <p>Il nostro server funziona su Cloudflare. Passa il disegno e la sua descrizione a fal (fal.ai), che esegue i modelli di IA usati da Paperhop:</p>
+  <ul>
+    <li><strong>Gemini di Google</strong> verifica che si tratti di un disegno fatto a mano, senza persone reali né foto, e scrive il movimento a partire dalla descrizione. fal vi accede tramite OpenRouter, un servizio di instradamento.</li>
+    <li><strong>GPT Image di OpenAI</strong> crea gli stili ricordo e l’immagine da cui partono i video Sembra vero, Peluche e Plastilina.</li>
+    <li><strong>Kling di Kuaishou</strong> crea il video.</li>
+  </ul>
+  <p>Questi servizi ricevono solo il disegno e un testo basato sulla sua descrizione, inviati dal nostro server. Non ricevono nulla dal tuo iPhone, né nulla che riporti il tuo nome o quello di tuo figlio.</p>
+
+  <h2>Per quanto tempo viene conservato</h2>
+  <ul>
+    <li><strong>Il nostro server</strong> elimina il disegno, la sua descrizione e ciò che ne viene creato entro 24 ore, di solito appena il tuo iPhone ha scaricato il risultato. Un registro di ogni lavoro, senza immagine, descrizione né prompt, viene eliminato dopo 30 giorni.</li>
+    <li><strong>fal</strong> non conserva la cronologia delle nostre richieste, e i file che crea scadono entro un’ora. Il nostro server li elimina appena ne ha una propria copia.</li>
+    <li><strong>Google</strong> può conservare le richieste per un periodo limitato per rilevare abusi: fino a 55 giorni, o fino a 90 giorni per ciò che i suoi controlli di sicurezza segnalano. Non le usa per addestrare i suoi modelli.</li>
+    <li><strong>OpenAI</strong> può conservare le richieste fino a 30 giorni per rilevare abusi, e più a lungo solo se la legge lo richiede o per prevenire danni. Non le usa per addestrare i suoi modelli.</li>
+    <li><strong>Kuaishou</strong>, tramite Kling AI Pte. Ltd., archivia i dati sui suoi server a Singapore e li conserva per il tempo necessario a fornire il suo servizio. La sua informativa sulla privacy dice che non li usa per addestrare modelli.</li>
+  </ul>
+
+  <h2>Cosa conserva il nostro server per il tuo piano</h2>
+  <p>Per sapere quale piano hai e quanti video e stili ricordo ti restano, il nostro server conserva:</p>
+  <ul>
+    <li>un ID che Apple assegna al tuo Apple Account per Paperhop. Non è il tuo nome, né la tua email, né il tuo Apple Account stesso, e i dispositivi con quell’Apple Account lo condividono;</li>
+    <li>per ogni iPhone, una chiave di App Attest di Apple, che dimostra che le richieste arrivano dalla vera app Paperhop, e il suo token per le notifiche se consenti le notifiche;</li>
+    <li>i tuoi acquisti Paperhop così come Apple li firma: il prodotto, le sue date, il paese dell’App Store, se è nella settimana gratis ed eventuali rimborsi;</li>
+    <li>un registro dei video e degli stili ricordo che il tuo piano ha dato, usato e restituito.</li>
+  </ul>
+  <p>Ogni richiesta contiene anche il numero di versione dell’app. Conserviamo questi registri finché servono per il tuo piano e i tuoi video.</p>
+
+  <h2>Notifiche</h2>
+  <p>Se consenti le notifiche, il nostro server usa il token per le notifiche del tuo iPhone, tramite Apple, per avvisarti quando un video è pronto o non è stato possibile crearlo. I messaggi sono generici, come «Il tuo disegno ha preso vita», e non includono mai il disegno né il suo titolo.</p>
+
+  <h2>Acquisti</h2>
+  <p>Paperhop Plus e i pacchetti di video si acquistano tramite Apple, secondo i termini e l’informativa sulla privacy di Apple. Non riceviamo mai i tuoi dati di pagamento. L’app invia al nostro server la ricevuta firmata da Apple di ogni acquisto, così ricevi il numero giusto di video e stili ricordo.</p>
+
+  <h2>Log</h2>
+  <p>Il database del nostro server non salva mai indirizzi IP. Cloudflare, su cui funziona il nostro server, conserva i log delle richieste fino a 7 giorni: l’ora di ogni richiesta, cosa è stato chiesto e dettagli tecnici della connessione, che possono includere l’indirizzo IP. Le nostre righe di log registrano solo ID, stati, tempi, modelli e costi, mai un disegno, una descrizione o un prompt.</p>
+
+  <h2>Condividere e salvare</h2>
+  <p>I video sorpresa, i video, le immagini e il PDF dell’album dell’anno vengono creati sul tuo iPhone, e vanno solo dove li condividi o li salvi. Un video sorpresa può contenere la registrazione di tuo figlio. Video e immagini portano un piccolo marchio «Creato con Paperhop», che indica anche a chi li guarda che sono stati creati con l’IA; con Plus puoi disattivarlo in Impostazioni.</p>
+
+  <h2>Le tue scelte</h2>
+  <p><em>Impostazioni → Consenso IA → Revoca il consenso IA</em> interrompe l’invio dei disegni. La scansione e il frigo continuano a funzionare. Puoi disattivare le notifiche nelle Impostazioni del tuo iPhone.</p>
+
+  <h2>Eliminare i tuoi dati</h2>
+  <p>Elimina un disegno dalla sua pagina, oppure un bambino e i suoi disegni in <em>Impostazioni → Bambini</em>; vengono rimossi dal tuo iCloud e dai dispositivi della tua famiglia. Eliminare l’app rimuove ciò che ha salvato su quell’iPhone. Per rimuovere i dati di Paperhop anche da iCloud, apri <em>Impostazioni → il tuo nome → iCloud → Archiviazione</em> sul tuo iPhone e scegli Paperhop.</p>
+  <p>Il nostro server elimina da sé i disegni e ciò che ne viene creato entro 24 ore. Per far eliminare i registri relativi al tuo Apple Account, scrivici. Paperhop non ha un account, quindi non possiamo cercarti per nome o email; troveremo insieme a te il modo di rintracciarli.</p>
+
+  <h2>Bambini</h2>
+  <p>Paperhop è pensata per i genitori. I bambini disegnano, raccontano i loro disegni e li guardano prendere vita, ma è un genitore a configurare l’app, dare il consenso nella schermata del consenso ed effettuare ogni acquisto. Non raccogliamo consapevolmente dati personali dai bambini: i loro nomi, le loro età e le loro registrazioni non ci arrivano mai, e un disegno con la sua descrizione ci arriva solo dopo il consenso di un genitore, e viene eliminato entro 24 ore.</p>
+
+  <h2>Dove vengono trattati</h2>
+  <p>Il nostro server funziona sulla rete mondiale di Cloudflare. fal, Google e OpenAI trattano i dati negli Stati Uniti e in altri paesi, e Kuaishou a Singapore, quindi un disegno e la sua descrizione possono essere trattati fuori dal tuo paese.</p>
+
+  <h2>Niente pubblicità, nessun tracciamento</h2>
+  <p>Paperhop non ha pubblicità, analisi né tracciamento. Non usa l’identificatore pubblicitario di Apple, e non vendiamo mai i tuoi dati né li condividiamo a fini pubblicitari.</p>
+
+  <h2>I tuoi diritti</h2>
+  <p>A seconda di dove vivi, puoi chiederci quali dati abbiamo su di te, chiederci di correggerli o eliminarli, e presentare un reclamo alla tua autorità per la protezione dei dati. Per tutto questo, scrivici.</p>
+
+  <h2>Versioni di prova (TestFlight)</h2>
+  <p>Se provi una versione preliminare con TestFlight di Apple, Apple può condividere con noi i rapporti sugli arresti anomali, e il feedback e le istantanee dello schermo che scegli di inviare, come descritto nei termini di TestFlight di Apple. Li usiamo solo per migliorare l’app.</p>
+
+  <h2>Quando ci scrivi</h2>
+  <p>Se ci scrivi, riceviamo il tuo indirizzo email e quello che scrivi. Li usiamo solo per risponderti e risolvere il problema, e li eliminiamo quando non servono più a questo scopo.</p>
+
+  <h2>Modifiche</h2>
+  <p>Se Paperhop inizia a trattare i dati in modo diverso, per esempio inviando qualcosa di nuovo o usando un nuovo servizio, aggiorneremo questa pagina e la data qui sopra prima che quella versione venga pubblicata, e la schermata del consenso lo dirà.</p>
+
+  <h2>Contatti</h2>
+  <p>Domande sulla privacy: <a href="mailto:support@plainrootstudio.com">support@plainrootstudio.com</a></p>
+  <footer>Paperhop di Plainroot Studio · <a href="support#it">Supporto Paperhop</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Condizioni d’uso</a></footer>
 </section>
 </main>
 </body>
